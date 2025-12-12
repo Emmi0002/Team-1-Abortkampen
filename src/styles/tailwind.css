@@ -1,50 +1,156 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
 @import "tailwindcss-animated";
 @import "tailwindcss-intersect";
+@plugin 'daisyui';
 
 @font-face {
-  font-family: 'Honk';
-  src: url('/fonts/Honk-Regular-VariableFont_MORF,SHLN.ttf') format('truetype');
+  font-family: "AvenirNextHeavy";
+  src: url("/fonts/AvenirNext/AvenirNextCyr-Heavy.woff2") format("woff2"), url("/fonts/AvenirNext/AvenirNextCyr-Heavy.woff") format("woff"),
+    url("/fonts/AvenirNext/AvenirNextCyr-Heavy.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: 'Quicksand';
-  src: url('/fonts/Quicksand-VariableFont_wght.ttf') format('truetype');
+  font-family: "AvenirNextBold";
+  src: url("/fonts/AvenirNext/AvenirNextCyr-Bold.woff2") format("woff2"), url("/fonts/AvenirNext/AvenirNextCyr-Bold.woff") format("woff"),
+    url("/fonts/AvenirNext/AvenirNextCyr-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: 'Domine';
-  src: url('/fonts/Domine-Regular.ttf') format('truetype');
+  font-family: "RobotoBold";
+  src: url("/fonts/Roboto/Roboto-Bold.woff2") format("woff2"), url("/fonts/Roboto/Roboto-Bold.woff") format("woff"), url("/fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RobotoRegular";
+  src: url("/fonts/Roboto/Roboto-Regular.woff2") format("woff2"), url("/fonts/Roboto/Roboto-Regular.woff") format("woff"), url("/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RobotoLight";
+  src: url("/fonts/Roboto/Roboto-Light.woff2") format("woff2"), url("/fonts/Roboto/Roboto-Light.woff") format("woff"), url("/fonts/Roboto/Roboto-Light.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+:root {
+  /* spacing */
+  --spacing-horizontal-xs: 8px;
+  --spacing-vertical-xs: 4px;
+  --spacing-horizontal: 16px;
+  --spacing-vertical: 8px;
+  --spacing-horizontal-m: 20px;
+  --spacing-vertical-m: 12px;
+  --spacing-horizontal-l: 24px;
+  --spacing-vertical-l: 16px;
+  --spacing-large: 24px;
+  --spacing-component-token: 12px;
+  --margin-v-sektioner-small: 90px;
+  --margin-v-sektioner-large: 100px;
+  --margin-h-sektioner-small: 20px;
+  --margin-h-sektioner-large: 50px;
+
+  /* radius */
+  --radius-xs: 4px;
+  --radius-s: 6px;
+  --radius-m: 8px;
+  --radius-l: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
 }
 
 @theme {
-  /* Her tilføjes theme variable // tokens */
+  --color-text-label: #572d75;
+  --color-surface-subtle: #efe8f8;
+  --color-surface-input: #fcfaeb;
+  /* typografi */
+  --font-text-bold: "RobotoBold", sans-serif;
+  --font-text-regular: "RobotoRegular", sans-serif;
+  --font-text-light: "RobotoLight", sans-serif;
 
-  /*Farver */
-  --color-primary-400: #00E4F5;
-  --color-primary-500: #006269;
-  --color-primary-600: #006D75;
-  --color-secondary-400: #F5E400;
-  --color-secondary-500: #F5A600;
-  --color-secondary-600: #F57A00;
-
-  /*Typografi */
-  --font-display: 'Honk', monospace;
-  --font-sans: 'Quicksand', sans-serif;
-  --font-serif: 'Domine', serif;
+  --font-heading-heavy: "AvenirNextHeavy", sans-serif;
+  --font-heading-bold: "AvenirNextBold", sans-serif;
 }
 
+@plugin "daisyui/theme" {
+  name: "BoerneBiffen";
+  default: true;
+  prefersdark: false;
+  color-scheme: "light";
+  --color-base-100: #e8e8e8;
+  --color-base-200: #371a4c;
+  --color-base-300: #c1a0e1;
+  --color-base-content: #181818;
+  --color-primary: #8447af;
+  --color-primary-content: #e8e8e8;
+  --color-secondary: #ff7f0f;
+  --color-secondary-content: #e8e8e8;
+  --color-accent: #fff4f1;
+  --color-accent-content: #ff7f0f;
+  --color-neutral: #e8e8e8;
+  --color-neutral-content: #181818;
+  --color-info: #02b7fb;
+  --color-info-content: oklch(29% 0.066 243.157);
+  --color-success: #a4b5a5;
+  --color-success-content: #181818;
+  --color-warning: #c9bd70;
+  --color-warning-content: oklch(28% 0.066 53.813);
+  --color-error: #ff78ff;
+  --color-error-content: oklch(27% 0.105 12.094);
+  --radius-selector: 2rem;
+  --radius-field: 1rem;
+  --radius-box: 0.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 1;
+}
 @layer base {
-
 }
 
-@layer components{
+@layer components {
+  @keyframes slide {
+    0%,
+    20% {
+      opacity: 1;
+    }
+    25%,
+    95% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 
+  @keyframes dotActive {
+    0%,
+    20% {
+      background-color: var(--color-primary);
+      opacity: 1;
+    }
+    25%,
+    95% {
+      background-color: white;
+      opacity: 0.5;
+    }
+    100% {
+      background-color: var(--color-primary);
+      opacity: 1;
+    }
+  }
 }
 
-@layer utilities{
-  
+@layer utilities {
 }

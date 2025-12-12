@@ -1,21 +1,25 @@
 ---
 // Henter parametrene fra Astro.props
-const { htmlheading = "h2", size = "", weight = "Regular", stylingclasses = "", color = "negative" } = Astro.props;
+const {
+  htmlheading = "h2",
+  size = "",
+  weight = "heavy",
+  stylingclasses = "",
+  color = "negative",
+} = Astro.props;
 const Htmlheading = htmlheading;
 
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige størrelser.
 const sizeClasses = {
-  Large: "text-[28px] md:text-[33px] lg:text-[49px]",
-  Medium: "text-[23px] md:text-[27px] lg:text-[39px]",
-  Small: "text-[20px] md:text-[23px] lg:text-[31px]",
-  Xsmall: "text-[18px] md:text-[19px] lg:text-[25px]",
+  large: "text-[28px] md:text-[33px] lg:text-[90px] uppercase",
+  medium: "text-[23px] md:text-[27px] lg:text-[40px] uppercase",
+  small: "text-[20px] md:text-[23px] lg:text-[31px] uppercase",
+  xsmall: "text-[18px] md:text-[19px] lg:text-[25px]",
 };
 
 const typeClasses = {
-  Light: "font-light font-['MerriweatherSansLight']",
-  Regular: "font-regular font-['MerriweatherSansRegular']",
-  Bold: "font-bold font-['MerriweatherSanBold']",
-  Ekstrabold: "font-ekstrabold font-['MerriweatherSansExtraBold']",
+  bold: "font-bold font-['AvenirNextBold']",
+  heavy: "font-ekstrabold font-['AvenirNextHeavy']",
 };
 
 const colorClasses = {
@@ -25,4 +29,11 @@ const colorClasses = {
 };
 ---
 
-<Htmlheading class:list={[stylingclasses, sizeClasses[size], colorClasses[color], typeClasses[weight]]}><slot /></Htmlheading>
+<Htmlheading
+  class:list={[
+    stylingclasses,
+    sizeClasses[size],
+    colorClasses[color],
+    typeClasses[weight],
+  ]}><slot /></Htmlheading
+>

@@ -22,26 +22,6 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: "RobotoBold";
-  src: url("/fonts/Roboto/Roboto-Bold.woff2") format("woff2"), url("/fonts/Roboto/Roboto-Bold.woff") format("woff"), url("/fonts/Roboto/Roboto-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "RobotoRegular";
-  src: url("/fonts/Roboto/Roboto-Regular.woff2") format("woff2"), url("/fonts/Roboto/Roboto-Regular.woff") format("woff"), url("/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "RobotoLight";
-  src: url("/fonts/Roboto/Roboto-Light.woff2") format("woff2"), url("/fonts/Roboto/Roboto-Light.woff") format("woff"), url("/fonts/Roboto/Roboto-Light.ttf") format("truetype");
-  font-weight: 100;
-  font-style: normal;
-}
 
 :root {
   /* spacing */
@@ -74,48 +54,45 @@
   --color-surface-subtle: #efe8f8;
   --color-surface-input: #fcfaeb;
   /* typografi */
-  --font-text-bold: "RobotoBold", sans-serif;
-  --font-text-regular: "RobotoRegular", sans-serif;
-  --font-text-light: "RobotoLight", sans-serif;
-
   --font-heading-heavy: "AvenirNextHeavy", sans-serif;
   --font-heading-bold: "AvenirNextBold", sans-serif;
 }
 
 @plugin "daisyui/theme" {
-  name: "BoerneBiffen";
-  default: true;
+  name: "abortkampen";
+  default: false;
   prefersdark: false;
-  color-scheme: "light";
-  --color-base-100: #e8e8e8;
-  --color-base-200: #371a4c;
-  --color-base-300: #c1a0e1;
-  --color-base-content: #181818;
-  --color-primary: #8447af;
-  --color-primary-content: #e8e8e8;
-  --color-secondary: #ff7f0f;
-  --color-secondary-content: #e8e8e8;
-  --color-accent: #fff4f1;
-  --color-accent-content: #ff7f0f;
-  --color-neutral: #e8e8e8;
-  --color-neutral-content: #181818;
-  --color-info: #02b7fb;
+  color-scheme: "abortkampen";
+  --color-base-100: oklch(100% 0 0);
+  --color-base-200: oklch(98% 0 0);
+  --color-base-300: oklch(95% 0 0);
+  --color-base-content: oklch(21% 0.006 285.885);
+  --color-primary: #FFde02;
+  --color-primary-content: #241e21;
+  --color-secondary: #f73288;
+  --color-secondary-content: #fcfcfc;
+  --color-accent: #FFCFE7;
+  --color-accent-content: oklch(38% 0.063 188.416);
+  --color-neutral: #241e21;
+  --color-neutral-content: #fcfcfc;
+  --color-info: oklch(94% 0.129 101.54);
   --color-info-content: oklch(29% 0.066 243.157);
-  --color-success: #a4b5a5;
-  --color-success-content: #181818;
-  --color-warning: #c9bd70;
-  --color-warning-content: oklch(28% 0.066 53.813);
-  --color-error: #ff78ff;
+  --color-success: oklch(76% 0.136 163.223);
+  --color-success-content: oklch(37% 0.077 168.94);
+  --color-warning: #ffb63a;
+  --color-warning-content: oklch(41% 0.112 45.904);
+  --color-error: oklch(71% 0.194 13.428);
   --color-error-content: oklch(27% 0.105 12.094);
-  --radius-selector: 2rem;
-  --radius-field: 1rem;
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
   --radius-box: 0.5rem;
-  --size-selector: 0.25rem;
-  --size-field: 0.25rem;
-  --border: 1px;
-  --depth: 1;
-  --noise: 1;
+  --size-selector: 0.28125rem;
+  --size-field: 0.21875rem;
+  --border: 1.5px;
+  --depth: 0;
+  --noise: 0;
 }
+
 @layer base {
 }
 

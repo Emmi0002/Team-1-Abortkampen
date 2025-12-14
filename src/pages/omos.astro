@@ -8,6 +8,102 @@ import Button from "../components/Button.astro";
 
 <MainLayout title="Abortkampen.dk - Om os">
   <main class="container mx-auto p-4">
-    <Heading htmlheading="h1">Lav noget flot!</Heading>
+    <section
+      class="flex flex-col items-center sm:flex-row gap-[var(--gap-h-large)] max-w-6xl mx-auto my-[var(--margin-v-sektioner-small)] mx-[var(--margin-h-sektioner-small)] md:my-[var(--margin-v-sektioner-large)] md:mx-[var(--margin-h-sektioner-large)]"
+    >
+      <div class="max-w-150 flex flex-col gap-[var(--spacing-vertical-l)]">
+        <Heading htmlheading="h1" size="medium">Om abortkampen.dk</Heading>
+        <Text teksttype="body">
+          Abortkampen.dk er en del af Sex & Samfunds arbejde for at styrke
+          viden, åbenhed og rettigheder i debatten om abort. Siden er udviklet
+          for at give mere plads og fokus til et af vores centrale mærkeområder:
+          retten til fri og sikker abort.
+        </Text>
+        <Text teksttype="body">
+          Her samler vi fakta, personlige fortællinger og perspektiver, så alle,
+          uanset ståsted, kan få adgang til troværdig viden og et nuanceret
+          overblik. Vores mål er at skabe et trygt og inkluderende rum, hvor
+          samtalen om abort kan foregå med respekt, indsigt og plads til
+          forskellighed.
+        </Text>
+        <Text teksttype="body">
+          Abortkampen.dk er derfor en platform, hvor vi kan gå i dybden med
+          abortområdet og skabe større forståelse for de mennesker, beslutninger
+          og politiske rammer, der præger debatten.
+        </Text>
+      </div>
+      <div>
+        <img
+          class="max-w-50"
+          src="img/Illustrations/FreeAbortion.webp"
+          alt="Skilt med teksten 'Fri abort, vores valg, vores liv'"
+        />
+      </div>
+    </section>
+
+    <section
+      class="bg-[var(--color-base-200)] my-[var(--margin-v-sektioner-small)] mx-[var(--margin-h-sektioner-small)] md:my-[var(--margin-v-sektioner-large)] md:mx-[var(--margin-h-sektioner-large)]"
+    >
+      <div class="max-w-180 flex flex-col gap-[var(--spacing-vertical-l)]">
+        <Heading htmlheading="h2">Vores vision</Heading>
+
+        <Text teksttype="body">
+          Vi ønsker en verden, hvor seksuel og reproduktiv sundhed og
+          rettigheder er opfyldt som en afgørende del af al menneskelig trivsel
+          og bæredygtig udvikling, og hvor alle frit kan træffe egne,
+          informerede valg om seksualitet og reproduktion uden at blive
+          diskrimineret. Fri abort som en del af vores arbejde
+        </Text>
+        <Text teksttype="body">
+          Fri abort er en central del af Sex &amp; Samfunds arbejde for
+          reproduktive rettigheder. Retten til at bestemme over egen krop er et
+          fundament i vores mission, og adgang til fri og sikker abort er
+          afgørende for, at mennesker kan leve frie, sunde og selvbestemte liv.
+        </Text>
+        <Text teksttype="body">
+          Abortkampen.dk samler viden, holdninger og politisk arbejde om netop
+          retten til abort – men er kun én del af vores bredere indsats for
+          seksuel og reproduktiv ligestilling. Vil du vide mere?
+        </Text>
+
+        <Link href="https://www.sexogsamfund.dk" variant="textlink">
+          Læs mere om vores øvrige mærkesager, projekter og rådgivning på Sex &
+          Samfunds officielle hjemmeside
+        </Link>
+      </div>
+    </section>
+
+    <section
+      class="flex flex-row items-center align-top gap-[var(--gap-h-large)] max-w-6xl mx-auto"
+    >
+      <div>
+        <img
+          class="max-w-25"
+          src="img/Logo/LogoYellow.webp"
+          alt="Skilt med teksten 'Fri abort, vores valg, vores liv'"
+        />
+      </div>
+      <div class="max-w-150 flex flex-col gap-[var(--spacing-vertical-l)]">
+        <Heading htmlheading="h1" size="medium">Om abortkampen.dk</Heading>
+        <Text teksttype="body">
+          Abortkampen.dk er en del af Sex & Samfunds arbejde for at styrke
+          viden, åbenhed og rettigheder i debatten om abort. Siden er udviklet
+          for at give mere plads og fokus til et af vores centrale mærkeområder:
+          retten til fri og sikker abort.
+        </Text>
+        <Text teksttype="body">
+          Her samler vi fakta, personlige fortællinger og perspektiver, så alle,
+          uanset ståsted, kan få adgang til troværdig viden og et nuanceret
+          overblik. Vores mål er at skabe et trygt og inkluderende rum, hvor
+          samtalen om abort kan foregå med respekt, indsigt og plads til
+          forskellighed.
+        </Text>
+        <Text teksttype="body">
+          Abortkampen.dk er derfor en platform, hvor vi kan gå i dybden med
+          abortområdet og skabe større forståelse for de mennesker, beslutninger
+          og politiske rammer, der præger debatten.
+        </Text>
+      </div>
+    </section>
   </main>
 </MainLayout>

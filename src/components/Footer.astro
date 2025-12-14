@@ -1,7 +1,118 @@
 ---
+import Text from "./Text.astro";
 ---
-<footer class="bg-primary-500 text-white">
-    <div class="container mx-auto p-4">
-        <p>&copy; 2025</p>
+
+<footer
+  class="footer lg:footer-horizontal bg-primary-content text-neutral-content px-[var(--margin-h-sektioner-small)] py-[var(--margin-v-sektioner-small)] md:px-[var(--margin-h-sektioner-large)] md:py-[var(--margin-v-sektioner-large)]"
+>
+  <aside class="max-w-20">
+    <img src="img/Logo/LogoWhite.webp" alt="Sex og samfund logo" />
+  </aside>
+
+  <nav class="lg:ml-50">
+    <Text teksttype="headline" color="negative" weight="bold"> Kontakt </Text>
+
+    <ul class="mt-4 space-y-8">
+      <li>
+        <a class="flex items-center gap-2 link link-hover">
+          <img src="/img/Icons/Phone.webp" alt="Telefon" class="w-8 h-8" />
+          <Text teksttype="body" color="negative" weight="regular">
+            Tlf. 33 93 10 10
+          </Text>
+        </a>
+      </li>
+      <li>
+        <a class="flex items-center gap-2 link link-hover">
+          <img src="/img/Icons/Mappin.webp" alt="Telefon" class="w-8 h-8" />
+          <Text teksttype="body" color="negative" weight="regular">
+            Lergravsvej 63, 2. sal <br /> 2300 København S
+          </Text>
+        </a>
+      </li>
+      <li>
+        <a class="flex items-center gap-2 link link-hover">
+          <img src="/img/Icons/Mail.webp" alt="Telefon" class="w-8 h-8" />
+          <Text teksttype="body" color="negative" weight="regular">
+            info@sexogsamfund.dk
+          </Text>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="space-y-5 max-w-70">
+    <Text teksttype="headline" color="negative" weight="bold">
+      ÅBNINGSTIDER
+    </Text>
+
+    <div class="space-y-3">
+      <Text teksttype="body" color="negative" weight="regular">
+        Sekretariat:
+      </Text>
+      <Text teksttype="body" color="negative" weight="regular">
+        Mandag - torsdag 09.00 - 16.00 (telefontid 9:00 - 16:00)
+      </Text>
+      <Text teksttype="body" color="negative" weight="regular">
+        Fredag 09.00-15.00 <br /> (telefontid 9:00 - 12:00)
+      </Text>
     </div>
+
+    <div class="space-y-1">
+      <Text teksttype="body" color="negative" weight="regular">
+        Præventions- og rådgivningsklinik:
+      </Text>
+      <Text teksttype="body" color="negative" weight="regular">
+        Mandag, tirsdag og torsdag mellem kl. 15.45 - 16.45
+      </Text>
+    </div>
+  </section>
+
+  <nav>
+    <Text teksttype="headline" color="negative" weight="bold"> Genveje </Text>
+
+    <ul class="mt-4 space-y-5">
+      <li>
+        <a href="/engagerdig" class="link link-hover">
+          <Text teksttype="body" color="negative" weight="regular">
+            Nyheder / Events
+          </Text>
+        </a>
+      </li>
+      <li>
+        <a href="/omos" class="link link-hover">
+          <Text teksttype="body" color="negative" weight="regular">
+            Om os
+          </Text>
+        </a>
+      </li>
+      <li>
+        <a class="link link-hover">
+          <Text teksttype="body" color="negative" weight="regular">
+            Ledige stillinger
+          </Text>
+        </a>n
+      </li>
+      <li>
+        <a class="link link-hover">
+          <Text teksttype="body" color="negative" weight="regular">
+            Persondata og cookiepolitik
+          </Text>
+        </a>
+      </li>
+      <li>
+        <a class="link link-hover">
+          <Text teksttype="body" color="negative" weight="regular">
+            Handelsbetingelser
+          </Text>
+        </a>
+      </li>
+      <li>
+        <a href="/komponentbibliotek" class="link link-hover">
+          <Text teksttype="body" color="negative" weight="regular">
+            Komponentbibliotek
+          </Text>
+        </a>
+      </li>
+    </ul>
+  </nav>
 </footer>

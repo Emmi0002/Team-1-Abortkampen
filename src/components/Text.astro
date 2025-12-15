@@ -1,6 +1,11 @@
 ---
 // Henter parametrene fra Astro.props
-const { teksttype = "", stylingclasses = "", weight = "regular", color = "negative" } = Astro.props;
+const {
+  teksttype = "",
+  stylingclasses = "",
+  weight = "regular",
+  color = "body",
+} = Astro.props;
 
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige størrelser.
 const sizeClasses = {
@@ -26,6 +31,13 @@ const colorClasses = {
 };
 ---
 
-<p class:list={[sizeClasses[teksttype], typeClasses[weight], colorClasses[color], stylingclasses]}>
+<p
+  class:list={[
+    sizeClasses[teksttype],
+    typeClasses[weight],
+    colorClasses[color],
+    stylingclasses,
+  ]}
+>
   <slot />
 </p>

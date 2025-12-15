@@ -4,7 +4,7 @@ const {
   href = "#",
   target = "_self",
   variant = "textlink",
-  size = "default",
+  size = "",
 } = Astro.props;
 
 //Definer den styling (Tailwind classes, der gør sig gældende for alle links
@@ -13,15 +13,20 @@ const linkStyling = "";
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige varianter
 const variantClasses = {
   textlink:
-    "underline text-[var(--color-base-content)] font-bold hover:text-[var(--color-secondary)] transition-colors duration-300",
+    "underline text-base-content font-bold hover:text-secondary transition-colors duration-300",
+
+  footerlink:
+    "flex items-center gap-2 text-neutral-content font-normal hover:text-secondary transition-colors duration-300",
+
+  linkbutton:
+    "btn btn-secondary btn-outlinebtn border-1 border-secondary bg-base-100 text-secondary font-bold hover:text-base-content transition-all duration-300 text-[12px] sm:text-[13px] md:text-[16px]  px-[var(--spacing-horizontal)] py-[var(--spacing-vertical)] sm:px-[var(--spacing-horizontal-m)] sm:py-[var(--spacing-vertical-m)] md:px-[var(--spacing-horizontal-l)] md:py-[var(--spacing-vertical-l)] rounded-[var(--radius-l)] ",
 };
 
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskelligeog størrelser.
 const sizeClasses = {
-  default: "text-default",
-  large: "text-4xl",
-  medium: "text-xl",
-  small: "text-large",
+  small: "text-sm",
+  medium: "text-base ",
+  large: "text-xl ",
 };
 ---
 

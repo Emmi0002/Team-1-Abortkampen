@@ -5,7 +5,7 @@ import Heading from "./Heading.astro";
 ---
 
 <section
-  class="bg-accent sm:flex justify-around items-center py-[var(--margin-v-sektioner-small)] px-[var(--margin-h-sektioner-small)] md:px-[var(--margin-h-sektioner-large)]"
+  class="bg-accent md:flex justify-around items-center gap-10 py-[var(--margin-v-sektioner-small)] px-[var(--margin-h-sektioner-small)] md:px-[var(--margin-h-sektioner-large)]"
   x-data="{ subscribed: false }"
 >
   <div>
@@ -15,18 +15,20 @@ import Heading from "./Heading.astro";
     </Text>
   </div>
 
-  <fieldset class="fieldset" x-show="!subscribed">
-    <div class="join border border-secondary rounded-none">
+  <fieldset class="fieldset w-full sm:w-auto" x-show="!subscribed">
+    <div class="join border border-secondary rounded-none w-full sm:w-[28rem]">
       <input
         type="email"
         placeholder="Email adresse"
-        class="input join-item border-0 rounded-none"
+        class="input join-item border-0 rounded-none
+             lg:h-14 lg:px-4 text-base w-full"
         required
         x-model="email"
       />
       <button
         type="submit"
-        class="btn join-item bg-secondary text-neutral-content border-0 rounded-none"
+        class="btn join-item bg-secondary text-neutral-content
+             border-0 rounded-none lg:h-14 lg:px-6"
         @click.prevent="subscribed = true"
       >
         TILMELD

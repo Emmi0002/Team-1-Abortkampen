@@ -4,7 +4,9 @@ const {
   href = "#",
   target = "_self",
   variant = "textlink",
-  size = "",
+  size = "small",
+  color = "negative",
+  weight = "regular",
 } = Astro.props;
 
 //Definer den styling (Tailwind classes, der gør sig gældende for alle links
@@ -13,10 +15,10 @@ const linkStyling = "";
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige varianter
 const variantClasses = {
   textlink:
-    "underline text-base-content font-bold hover:text-secondary transition-colors duration-300",
+    "underline text-base-content font-bold hover:text-secondary transition-colors duration-300 ",
 
   footerlink:
-    "flex items-center gap-2 text-neutral-content font-normal hover:text-secondary transition-colors duration-300",
+    "flex items-center gap-2 hover:text-secondary transition-colors duration-300",
 
   linkbutton:
     "btn btn-secondary btn-outline btn border-1 border-secondary bg-base-100 text-secondary font-bold hover:text-base-content transition-all duration-300 btn-sm md:btn-md lg:btn-lg xl:btn-xl ",
@@ -24,9 +26,19 @@ const variantClasses = {
 
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskelligeog størrelser.
 const sizeClasses = {
-  small: "text-sm",
-  medium: "text-base ",
-  large: "text-xl ",
+  small: "text-xs sm:text-sm md:text-base ",
+  medium: "text-base sm:text-lg md:text-xl ",
+  large: "text-xl sm:text-2xl md:text-3xl ",
+};
+
+const colorClasses = {
+  negative: "text-neutral-content",
+  body: "text-base-content",
+};
+
+const weightClasses = {
+  regular: "font-normal",
+  bold: "font-bold",
 };
 ---
 
@@ -34,6 +46,11 @@ const sizeClasses = {
 <a
   href={href}
   target={target}
-  class:list={[linkStyling, variantClasses[variant], sizeClasses[size]]}
-  ><slot /></a
+  class:list={[
+    linkStyling,
+    variantClasses[variant],
+    sizeClasses[size],
+    colorClasses[color],
+    weightClasses[weight],
+  ]}><slot /></a
 >

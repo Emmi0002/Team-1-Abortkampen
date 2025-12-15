@@ -38,9 +38,10 @@
   --spacing-component-token: 12px;
   --margin-v-sektioner-small: 90px;
   --margin-v-sektioner-large: 100px;
-  --margin-h-sektioner-small: 50px;
+  --margin-h-sektioner-small: 20px;
   --margin-h-sektioner-medium: 70px;
-  --margin-h-sektioner-large: 250px;
+  --margin-h-sektioner-large: 50px;
+  --margin-h-sektioner-xlarge: 250px;
   --gap-h-large: 60px;
 
   /* radius */

@@ -5,7 +5,7 @@ const {
   size = "medium",
   weight = "heavy",
   stylingclasses = "",
-  color = "negative",
+  color = "body",
 } = Astro.props;
 const Htmlheading = htmlheading;
 
@@ -23,9 +23,9 @@ const typeClasses = {
 };
 
 const colorClasses = {
-  label: "text-[var(--color-text-label)]",
-  body: "text-[var(--color-base-content)]",
-  negative: "text-[var(--color-primary-content)]",
+  label: "text-secondary",
+  body: "text-base-content",
+  negative: "text-neutral-content",
 };
 ---
 

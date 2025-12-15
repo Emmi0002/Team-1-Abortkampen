@@ -1,51 +1,85 @@
 ---
 import Text from "./Text.astro";
+import Link from "./Link.astro";
+import Heading from "./Heading.astro";
 ---
+
+<section
+  class="bg-accent sm:flex justify-around items-center py-[var(--margin-v-sektioner-small)] px-[var(--margin-h-sektioner-small)] md:px-[var(--margin-h-sektioner-large)]"
+  x-data="{ subscribed: false }"
+>
+  <div>
+    <Heading htmlheading="h3" size="small">Modtag vores nyhedsbrev</Heading>
+    <Text teksttype="body">
+      Få nyheder om alle vores fremtidige events og arrangementer
+    </Text>
+  </div>
+
+  <fieldset class="fieldset" x-show="!subscribed">
+    <div class="join border border-secondary rounded-none">
+      <input
+        type="email"
+        placeholder="Email adresse"
+        class="input join-item border-0 rounded-none"
+        required
+        x-model="email"
+      />
+      <button
+        type="submit"
+        class="btn join-item bg-secondary text-neutral-content border-0 rounded-none"
+        @click.prevent="subscribed = true"
+      >
+        TILMELD
+      </button>
+    </div>
+  </fieldset>
+
+  <div x-show="subscribed">
+    <Text teksttype="body" weight="bold">
+      Du er nu tilmeldt nyhedsbrevet!
+    </Text>
+  </div>
+</section>
 
 <footer
   class="footer lg:footer-horizontal bg-primary-content text-neutral-content px-[var(--margin-h-sektioner-small)] py-[var(--margin-v-sektioner-small)] md:px-[var(--margin-h-sektioner-large)] md:py-[var(--margin-v-sektioner-large)]"
 >
   <aside class="max-w-20">
-    <img src="img/Logo/LogoWhite.webp" alt="Sex og samfund logo" />
+    <img src="/img/Logo/LogoWhite.webp" alt="Sex og samfund logo" />
   </aside>
 
-  <nav class="lg:ml-50">
-    <Text teksttype="headline" color="negative" weight="bold"> Kontakt </Text>
+  <nav class="lg:ml-50 space-y-[var(--spacing-vertical)]">
+    <Text teksttype="headline" color="negative" weight="bold">
+      Kontakt os
+    </Text>
+    <Link href="tel:+4533931010" variant="footerlink" size="small">
+      <img src="/img/Icons/Phone.webp" alt="Telefon" class="w-8 h-8" />
+      <Text teksttype="body" color="negative" weight="regular">
+        Tlf. 33 93 10 10
+      </Text>
+    </Link>
 
-    <ul class="mt-4 space-y-8">
-      <li>
-        <a class="flex items-center gap-2 link link-hover">
-          <img src="/img/Icons/Phone.webp" alt="Telefon" class="w-8 h-8" />
-          <Text teksttype="body" color="negative" weight="regular">
-            Tlf. 33 93 10 10
-          </Text>
-        </a>
-      </li>
-      <li>
-        <a class="flex items-center gap-2 link link-hover">
-          <img src="/img/Icons/Mappin.webp" alt="Telefon" class="w-8 h-8" />
-          <Text teksttype="body" color="negative" weight="regular">
-            Lergravsvej 63, 2. sal <br /> 2300 København S
-          </Text>
-        </a>
-      </li>
-      <li>
-        <a class="flex items-center gap-2 link link-hover">
-          <img src="/img/Icons/Mail.webp" alt="Telefon" class="w-8 h-8" />
-          <Text teksttype="body" color="negative" weight="regular">
-            info@sexogsamfund.dk
-          </Text>
-        </a>
-      </li>
-    </ul>
+    <Link variant="footerlink" size="small">
+      <img src="/img/Icons/Mappin.webp" alt="Telefon" class="w-8 h-8" />
+      <Text teksttype="body" color="negative" weight="regular">
+        Lergravsvej 63, 2. sal <br /> 2300 København S
+      </Text>
+    </Link>
+
+    <Link href="mailto:info@sexogsamfund.dk" variant="footerlink" size="small">
+      <img src="/img/Icons/Mail.webp" alt="Telefon" class="w-8 h-8" />
+      <Text teksttype="body" color="negative" weight="regular">
+        info@sexogsamfund.dk
+      </Text>
+    </Link>
   </nav>
 
-  <section class="space-y-5 max-w-70">
+  <section class="space-y-[var(--spacing-vertical)] max-w-70">
     <Text teksttype="headline" color="negative" weight="bold">
       ÅBNINGSTIDER
     </Text>
 
-    <div class="space-y-3">
+    <div class="space-y-[var(--spacing-vertical)]">
       <Text teksttype="body" color="negative" weight="regular">
         Sekretariat:
       </Text>
@@ -57,7 +91,7 @@ import Text from "./Text.astro";
       </Text>
     </div>
 
-    <div class="space-y-1">
+    <div class="space-y-[var(--spacing-vertical)]">
       <Text teksttype="body" color="negative" weight="regular">
         Præventions- og rådgivningsklinik:
       </Text>
@@ -67,52 +101,23 @@ import Text from "./Text.astro";
     </div>
   </section>
 
-  <nav>
+  <nav class="space-y-[var(--spacing-vertical)]">
     <Text teksttype="headline" color="negative" weight="bold"> Genveje </Text>
 
-    <ul class="mt-4 space-y-5">
-      <li>
-        <a href="/engagerdig" class="link link-hover">
-          <Text teksttype="body" color="negative" weight="regular">
-            Nyheder / Events
-          </Text>
-        </a>
-      </li>
-      <li>
-        <a href="/omos" class="link link-hover">
-          <Text teksttype="body" color="negative" weight="regular">
-            Om os
-          </Text>
-        </a>
-      </li>
-      <li>
-        <a class="link link-hover">
-          <Text teksttype="body" color="negative" weight="regular">
-            Ledige stillinger
-          </Text>
-        </a>n
-      </li>
-      <li>
-        <a class="link link-hover">
-          <Text teksttype="body" color="negative" weight="regular">
-            Persondata og cookiepolitik
-          </Text>
-        </a>
-      </li>
-      <li>
-        <a class="link link-hover">
-          <Text teksttype="body" color="negative" weight="regular">
-            Handelsbetingelser
-          </Text>
-        </a>
-      </li>
-      <li>
-        <a href="/komponentbibliotek" class="link link-hover">
-          <Text teksttype="body" color="negative" weight="regular">
-            Komponentbibliotek
-          </Text>
-        </a>
-      </li>
-    </ul>
+    <Link href="/engagerdig" variant="footerlink" size="small"
+      >Nyheder / Events</Link
+    >
+
+    <Link href="/omos" variant="footerlink" size="small">Om os</Link>
+
+    <Link variant="footerlink" size="small">Ledige stillinger</Link>
+
+    <Link variant="footerlink" size="small">Persondata og cookiepolitik</Link>
+
+    <Link variant="footerlink" size="small">Handelsbetingelser</Link>
+
+    <Link href="/komponentbibliotek" variant="footerlink" size="small">
+      Komponentbibliotek</Link
+    >
   </nav>
 </footer>

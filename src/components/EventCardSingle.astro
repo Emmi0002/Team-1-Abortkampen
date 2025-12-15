@@ -1,0 +1,28 @@
+---
+import Text from "./Text.astro";
+
+const { imagelink = "", imagetext = "", title = "", date = "", location = "", informationtext = "", theme = "infomøde", themeName = "" } = Astro.props;
+
+const themeColor = {
+  infomøde: "bg-primary",
+  demonstration: "bg-secondary",
+  oplysningskampagne: "bg-accent",
+};
+---
+
+<div class="">
+  <div class="relative">
+    <img src={imagelink} alt={imagetext} />
+    <div class="absolute bottom-4 left-0 inline-block px-3 py-0.5 rounded-r" class:list={[themeColor[theme]]}>
+      <Text teksttype="subtitle" , stylingclasses="" , weight="regular" , color="body" ,>{themeName}</Text>
+    </div>
+    <div class="absolute bottom-0 left-0 w-full h-2" class:list={[themeColor[theme]]}></div>
+  </div>
+  <div>
+    <Text teksttype="headline" , stylingclasses="mb-[var(--spacing-vertical-m)]" , weight="bold" , color="body" ,>{title}</Text>
+    <Text teksttype="subtitle" , stylingclasses="mb-[var(--spacing-vertical-m)]" , weight="light" , color="body" ,>🗓️ {date}</Text>
+    <Text teksttype="subtitle" , stylingclasses="mb-[var(--spacing-vertical-m)]" , weight="light" , color="body" ,>📍 {location}</Text>
+    <Text teksttype="body" , stylingclasses="mb-[var(--spacing-vertical-m)]" , weight="regular" , color="body" ,>{informationtext}</Text>
+    <!-- Indsæt knap -->
+  </div>
+</div>

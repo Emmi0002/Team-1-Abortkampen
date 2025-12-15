@@ -1,0 +1,36 @@
+---
+import EventCardSingle from "./EventCardSingle.astro";
+---
+
+<section class="grid grid-cols-3 gap-[var(--spacing-horizontal-xl)] mx-[var(--margin-h-sektioner-large)]">
+  <EventCardSingle
+    imagelink="/img/Workshop.webp"
+    imagetext="Event billede 1"
+    title="Bliv oplyst om kampen"
+    date="15. januar 2026"
+    location="København S"
+    informationtext="Kom til vores infomøde og bliv klogere på kampen for retten til egen krop og hvordan du selv kan engagere dig."
+    theme="infomøde"
+    themeName="Infomøde"
+  />
+  <EventCardSingle
+    imagelink="/img/RouteTalk.webp"
+    imagetext="Event billede 1"
+    title="StreetTalk"
+    date="20. februar 2026"
+    location="København"
+    informationtext="Gå med ud på gaden og tal med folk om retten til egen krop, og vær med til at sprede viden og engagere andre aktivt."
+    theme="oplysningskampagne"
+    themeName="Oplysningskampagne"
+  />
+  <EventCardSingle
+    imagelink="/img/MyBodyMyChoice2026.webp"
+    imagetext="Event billede 1"
+    title="MY BODY MY CHOICE 2026"
+    date="20. marts 2026"
+    location="Rådhuspladsen, København"
+    informationtext="Efter den store succes med sidste års markering vender vi stærkere tilbage i år."
+    theme="demonstration"
+    themeName="Demonstration"
+  />
+</section>

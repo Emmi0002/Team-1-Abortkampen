@@ -1,21 +1,53 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Heading from "../components/Heading.astro";
+import InformationBox from "../components/InformationBox.astro";
 import Text from "../components/Text.astro";
-import Button from "../components/Button.astro";
+import EventCards from "../components/EventCards.astro";
 ---
 
 <MainLayout title="Abortkampen.dk - Engager dig">
-  <main class="container mx-auto p-4">
-    <Heading htmlheading="h1">Lav noget flot!</Heading>
-
-    <script
-      src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js"
-      type="module"></script>
-    <dotlottie-wc
-      src="https://lottie.host/6efa096f-7b80-4ed3-aebf-736f9d72404a/n5k53iJHM8.lottie"
-      style="width: 300px;height: 300px"
-      autoplay
-      loop></dotlottie-wc>
+  <main class="">
+    <!-- ---------- Information bos start ----------- -->
+    <InformationBox
+      title="Nyt i abortkampen"
+      subtitle="Kampen for retten til fri abort giver resultater - historisk ja på Færøerne."
+      text1="Den 4. december 2025 har Færøernes parlament, Lagtinget, stemt for, at kvinder på Færøerne nu har ret til fri abort op til 12. graviditetsuge. Det markerer et historisk vendepunkt for abortrettigheder i regionen, hvor tidligere abort kun var tilladt i særlige tilfælde."
+      text2="Beslutningen er et stærkt signal om, at retten til selvbestemmelse over egen krop stadig er et aktuelt og globalt vigtigt spørgsmål, og at kampen fortsætter, også uden for Danmarks vesteuropæiske grænser."
+      imagelink="/img/Illustrations/YesFreeAbortion.webp"
+      ,
+      imagetext="Skilt med teksten 'Ja til fri abort'"
+    />
+    <!-- ---------- Information bos slut ----------- -->
+    <!-- ---------- Engager dig sektion start ----------- -->
+    <section
+      class="lg:grid grid-cols-[1fr_2fr] mx-[var(--margin-h-sektioner-small)] lg:mx-[var(--margin-h-sektioner-large)] my-[var(--margin-v-sektioner-small)] lg:my-[var(--margin-v-sektioner-large)]"
+    >
+      <div class="col-start-2 col-end-3">
+        <Heading htmlheading="h2" , size="medium" , weight="heavy" , stylingclasses="" , color="body">Engager dig </Heading>
+        <Text teksttype="body" , stylingclasses="" , weight="regular" , color="body"
+          >Kampen for retten til fri og sikker abort bæres af mennesker, der står sammen, møder op og gør deres stemme hørt. Her samler vi de initiativer, aktiviteter og fællesskaber, hvor du kan være
+          med til at skabe bevægelse, uanset om du engagerer dig i debatten, deltager i events eller blot følger udviklingen.</Text
+        >
+        <Text teksttype="body" , stylingclasses="" , weight="regular" , color="body"
+          >Vi opdaterer løbende med kommende arrangementer, seneste nyheder og tilbageblik på de øjeblikke, hvor vi har stået sammen om at styrke retten til selvbestemmelse.</Text
+        >
+      </div>
+      <div class="col-start-1 col-end-2 row-start-1 row-end-2">
+        <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js" type="module"></script>
+        <dotlottie-wc src="https://lottie.host/6efa096f-7b80-4ed3-aebf-736f9d72404a/n5k53iJHM8.lottie" style="width: 400px;height: 400px" autoplay loop></dotlottie-wc>
+      </div>
+    </section>
+    <!-- ---------- Engager dig sektion slut ----------- -->
+    <!-- ------------ Event cards start --------- -->
+    <EventCards
+      imagelink="/img/Workshop.webp"
+      imagetext="Event billede 1"
+      title="Infomøde om abortrettigheder"
+      date="12. marts 2024"
+      location="København"
+      informationtext="Deltag i vores infomøde for at lære mere om aktuelle abortrettigheder og hvordan du kan engagere dig."
+    />
+    <!-- ------------ Event cards slut --------- -->
   </main>
 </MainLayout>

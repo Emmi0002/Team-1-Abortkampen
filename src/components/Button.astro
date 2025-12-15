@@ -1,16 +1,22 @@
 ---
 import Text from "./Text.astro";
 // Henter parametrene fra Astro.props
-const { variant = "primary" } = Astro.props;
+const { variant = "primary", size = "" } = Astro.props;
 
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige varianter
 const variantClasses = {
-  primary: "btn btn-primary",
-  secondary: "btn btn-secondary btn-outline",
+  primary:
+    "btn btn-primary btn-sm md:btn-md lg:btn-lg xl:btn-xl hover:text-neutral-content hover:bg-base-content hover:border-base-content ",
+  secondary:
+    "btn btn-secondary btn-outline btn-sm md:btn-md lg:btn-lg xl:btn-xl hover:text-base-content hover:bg-base-100",
+};
+
+const sizeClasses = {
+  wide: "btn-wide",
 };
 ---
 
 <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
-<button class:list={[variantClasses[variant]]}>
+<button class:list={[variantClasses[variant], sizeClasses[size]]}>
   <Text teksttype="body"> <slot /> </Text>
 </button>

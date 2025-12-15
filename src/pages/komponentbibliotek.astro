@@ -244,7 +244,7 @@ import thumbsup from "../assets/images/thumbsup.png";
     <hr class="my-15" />
 
     <!-- Link komponent instanser -->
-    <section>
+    <sectionc class="my-15">
       <Heading htmlheading="h2" size="medium">Links</Heading>
 
       <div class="my-10">
@@ -272,20 +272,31 @@ import thumbsup from "../assets/images/thumbsup.png";
         <Text teksttype="body" stylingclasses="mb-6"
           >Responsive padding (mobile/sm/md):</Text
         >
-        <div class="flex flex-wrap gap-4">
+        <div>
           <Link href="#" variant="linkbutton">Link Knap</Link>
         </div>
       </div>
-    </section>
+    </sectionc>
     <!-- Slut på Link komponent instanser -->
 
     <hr class="my-15" />
     <!-- Buttons komponent instanser -->
-    <section>
-      <Heading htmlheading="h2" size="medium">Knapper</Heading>
-      <Button>Default knap</Button>
-      <Button variant="secondary">Default knap</Button>
+    <section class="my-15">
+      <div class="mb-6">
+        <Heading htmlheading="h2" size="medium">Knapper</Heading>
+      </div>
+      <div>
+        <div class="mb-6">
+          <Button>Primary knap</Button>
+          <Button variant="secondary">Secondary knap</Button>
+        </div>
+
+        <div>
+          <Button size="wide">Primary bred knap</Button>
+          <Button variant="secondary" size="wide">Secondary bred knap</Button>
+        </div>
+      </div>
     </section>
-    <!-- Slut på Buttons komponent instanser -->
   </main>
+  <!-- Slut på Buttons komponent instanser -->
 </MainLayout>

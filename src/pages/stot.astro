@@ -26,11 +26,53 @@ import Text from "../components/Text.astro";
       </div>
     </div>
 
+    <!-- Container for formular til højre -->
+    <div class="flex justify-end px-4 md:px-20 -mt-150">
+      <!-- lang støt formular -->
+      <div class="border-secondary border-4 rounded-[var(--radius-box)] w-[550px] p-20">
+        <Text teksttype="caption" weight="heavyavenir" color="body">støt nu</Text>
+        <Text teksttype="bocy" weight="regular" color="body">Med din støtte giver du kvinder mulighed for at få foretaget en sikker abort</Text>
+        <div>
+          <!-- knapper til beløb -->
+        </div>
+        <!-- betalingsform -->
+        <div>
+          <div class="flex flex-row gap-4">
+            <input type="checkbox" class="checkbox checkbox-secondary" />
+            <Text teksttype="body" weight="regular" color="body">Betalingskort</Text>
+          </div>
+          <div class="flex flex-row gap-4">
+            <input type="checkbox" class="checkbox checkbox-secondary" />
+            <Text teksttype="body" weight="regular" color="body">Betalingsservice</Text>
+          </div>
+          <div class="flex flex-row gap-4">
+            <input type="checkbox" class="checkbox checkbox-secondary" />
+            <Text teksttype="body" weight="regular" color="body">Mobilepay</Text>
+          </div>
+        </div>
+        <!-- skat og cpr -->
+        <div class="mt-4">
+          <div class="flex flex-row gap-4">
+            <input type="checkbox" class="checkbox checkbox-secondary" />
+            <Text teksttype="body" weight="regular" color="body">Ønsker du skattefradrag</Text>
+          </div>
+          <input type="text" placeholder="CPR - nummer" class="input input-secondary" />
+        </div>
+        <!-- personlige oplysninger -->
+        <div>
+          <div class="flex flex-row gap-4 mt-4">
+            <input type="text" placeholder="Fornavn" class="input input-secondary" />
+            <input type="text" placeholder="Efternavn" class="input input-secondary" />
+          </div>
+          <input type="email" placeholder="Email" class="input input-secondary w-full mt-4" />
+          <input type="tel" placeholder="Telefonnummer" class="input input-secondary w-full mt-4" />
+        </div>
+      </div>
+    </div>
+
     <!-- hvad din støtte gør muligt -->
-    <div class="lg:px-20 px-4 mx-auto mt-16">
-      <Heading htmlheading="h4" size="xsmall" weight="bold" color="body"
-        >Hvad din støtte gør muligt</Heading
-      >
+    <div class="lg:px-20 px-4 mt-16">
+      <Heading htmlheading="h4" size="xsmall" weight="bold" color="body">Hvad din støtte gør muligt</Heading>
       <div class="flex items-center gap-4 mt-4 md:text-center">
         <!-- Lille vertikal streg i primary color med rundede ender -->
         <div class="w-4 h-12 bg-primary rounded-full mt-4"></div>

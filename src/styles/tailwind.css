@@ -55,9 +55,6 @@
 }
 
 @theme {
-  --color-text-label: #572d75;
-  --color-surface-subtle: #efe8f8;
-  --color-surface-input: #fcfaeb;
   /* typografi */
   --font-heading-heavy: "AvenirNextHeavy", sans-serif;
   --font-heading-bold: "AvenirNextBold", sans-serif;

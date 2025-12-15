@@ -240,60 +240,52 @@ import thumbsup from "../assets/images/thumbsup.png";
       </div>
     </section>
     <!-- slut på typografi -->
+
     <hr class="my-15" />
+
     <!-- Link komponent instanser -->
     <section>
       <Heading htmlheading="h2" size="medium">Links</Heading>
-      <Text teksttype="brødtekst"
-        ><Link href="#">Default link: </Link>Default linket er en del af en
-        tekst, og burde gerne fungere som et <Link href="#">link</Link> i en paragraf.</Text
-      >
+
+      <div class="my-10">
+        <Heading htmlheading="h3" size="small" weight="bold">Textlink</Heading>
+        <Text teksttype="body">
+          Default linket er en del af en tekst, og burde gerne fungere som et <Link
+            href="#">textlink her</Link
+          > i en paragraf.
+        </Text>
+      </div>
+
+      <div class="my-10 bg-primary-content">
+        <Heading htmlheading="h3" size="small" weight="bold" color="negative"
+          >Footerlink</Heading
+        >
+        <div class="flex gap-6">
+          <Link href="#" variant="footerlink">Om os</Link>
+          <Link href="#" variant="footerlink">Handelsbetingelser</Link>
+          <Link href="#" variant="footerlink">Persondata og cookiepolitik</Link>
+        </div>
+      </div>
+
+      <div class="my-10">
+        <Heading htmlheading="h3" size="small" weight="bold"
+          >Link Button</Heading
+        >
+        <Text teksttype="body" stylingclasses="mb-6"
+          >Responsive padding (mobile/sm/md):</Text
+        >
+        <div class="flex flex-wrap gap-4">
+          <Link href="#" variant="linkbutton">Link Knap</Link>
+        </div>
+      </div>
     </section>
     <!-- Slut på Link komponent instanser -->
 
     <hr class="my-15" />
     <!-- Buttons komponent instanser -->
     <section>
-      <Heading htmlheading="h2" size="medium">Buttons</Heading>
-      <div class="flex gap-40">
-        <div class="flex flex-col gap-5">
-          <Text><Button>Default knap</Button></Text>
-          <Text><Button variant="primary">Button variant: primary</Button></Text
-          >
-          <Text
-            ><Button variant="primary" size="small"
-              >Button variant: primary size small</Button
-            ></Text
-          >
-          <Text
-            ><Button variant="primary" size="medium"
-              >Button variant: primary size medium</Button
-            ></Text
-          >
-          <Text
-            ><Button variant="primary" size="large"
-              >Button variant: primary size large</Button
-            ></Text
-          >
-        </div>
-        <div class="flex flex-col gap-5">
-          <Text
-            ><Button variant="secondary" size="small"
-              >Button variant: secondary size small</Button
-            ></Text
-          >
-          <Text
-            ><Button variant="secondary" size="medium"
-              >Button variant: secondary size medium</Button
-            ></Text
-          >
-          <Text
-            ><Button variant="secondary" size="large"
-              >Variant: secondary size large</Button
-            ></Text
-          >
-        </div>
-      </div>
+      <Button>Default knap</Button>
+      <Button variant="secondary">Default knap</Button>
     </section>
     <!-- Slut på Buttons komponent instanser -->
   </main>

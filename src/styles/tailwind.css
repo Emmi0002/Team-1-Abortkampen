@@ -59,6 +59,8 @@
 
   /* Form variables */
   --border-size: 3px;
+  --padding-2xlarge: 60px;
+  --padding-xlarge: 40px;
   --padding-large: 30px;
   --padding-small: 25px;
   --gap-h-large: 20px;

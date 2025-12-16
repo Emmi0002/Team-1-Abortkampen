@@ -15,33 +15,37 @@ import Text from "./Text.astro";
       });
     }
   }"
-  class="fixed w-full top-0 z-40 transition-all duration-500 ease-in-out bg-base-100 shadow-lg"
+  class="fixed top-0 p-0 w-full z-40 transition-all duration-500 ease-in-out bg-transparent grid grid-cols-[1fr_7fr] lg:grid-cols-[1fr_14fr]"
 >
-  <div class="navbar transition-all duration-500 ease-in-out" :class="scrolled ? 'py-2 items-center' : 'py-4 items-start'">
+  <a href="/">
+    <div class="bg-secondary p-2 transition-all duration-500 ease-in-out items-center" :class="scrolled ? '' : 'self-start'">
+      <img src="/img/Logo/LogoWhite.webp" alt="Abortkampen logo" class="transition-all duration-500 ease-in-out mx-auto my-auto" :class="scrolled ? 'lg:h-16 h:8 w-auto' : 'lg:h-30 h:10 w-auto'" />
+    </div>
+  </a>
+  <div class="navbar transition-all duration-500 ease-in-out bg-base-100 h-[80px]" :class="scrolled ? ' items-center' : 'py-4 items-start'">
     <div class="navbar-start">
       <!-- Logo med secondary baggrund -->
-      <div class="bg-secondary p-3 transition-all duration-500 ease-in-out" :class="scrolled ? '' : 'self-start'">
-        <img src="/img/Logo/LogoWhite.webp" alt="Abortkampen logo" class="transition-all duration-500 ease-in-out" :class="scrolled ? 'h-8 w-auto' : 'h-20 w-auto'" />
-      </div>
 
       <!-- Menu knap -->
-      <button class="btn btn-ghost lg:hidden transition-all duration-500 ease-in-out" :class="scrolled ? '' : 'self-start'" x-on:click="showmenu = !showmenu">
-        <Text teksttype="body" weight="bold" color="body">MENU</Text>
-      </button>
+      <div>
+        <button class="link lg:hidden transition-all duration-500 ease-in-out" :class="scrolled ? '' : 'self-start'" x-on:click="showmenu = !showmenu">
+          <Text teksttype="body" weight="bold" color="body">MENU</Text>
+        </button>
 
-      <!-- Desktop navigation - skjult på mobil -->
-      <div class="hidden lg:flex items-center gap-4 transition-all duration-500 ease-in-out" :class="scrolled ? '' : 'self-start'">
-        <Link variant="textlink" href="/omos" color="body" class={currentPath === "omos/" || currentPath === "omos" ? "text-secondary !font-bold" : ""}> Om os </Link>
-        <div class="w-px md:h-4 bg-base-content opacity-30"></div>
-        <Link variant="textlink" href="/engagerdig" color="body" class={currentPath === "engagerdig/" || currentPath === "engagerdig" ? "text-secondary !font-bold" : ""}> Engager dig </Link>
-        <div class="w-px md:h-4 bg-base-content opacity-30"></div>
-        <Link variant="textlink" color="body" href="https://www.sexogsamfund.dk/">Sex og samfund</Link>
+        <!-- Desktop navigation - skjult på mobil -->
+        <div class="hidden lg:flex items-center gap-4 transition-all duration-500 ease-in-out" :class="scrolled ? '' : 'self-start'">
+          <Link variant="textlink" href="/omos" color="body" class={currentPath === "omos/" || currentPath === "omos" ? "text-secondary !font-bold" : ""}> Om os </Link>
+          <div class="w-px md:h-4 bg-base-content opacity-30"></div>
+          <Link variant="textlink" href="/engagerdig" color="body" class={currentPath === "engagerdig/" || currentPath === "engagerdig" ? "text-secondary !font-bold" : ""}> Engager dig </Link>
+          <div class="w-px md:h-4 bg-base-content opacity-30"></div>
+          <Link variant="textlink" color="body" href="https://www.sexogsamfund.dk/">Sex og samfund</Link>
+        </div>
       </div>
     </div>
 
     <!-- Mobile menu -->
-    <div class="absolute top-full left-0 w-full bg-accent shadow-lg z-50 lg:hidden" x-show="showmenu" x-transition x-on:click.away="showmenu = false">
-      <ul class="menu p-4">
+    <div class="absolute top-full left-0 w-full bg-accent z-50 lg:hidden" x-show="showmenu" x-transition x-on:click.away="showmenu = false">
+      <ul class="p-4">
         <li class="mb-2">
           <Link variant="textlink" href="/omos" color="body" class={currentPath === "omos/" || currentPath === "omos" ? "text-secondary !font-bold" : ""}> Om os </Link>
         </li>

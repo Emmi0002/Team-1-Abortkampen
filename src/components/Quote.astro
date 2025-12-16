@@ -6,10 +6,10 @@ const { title = "", body = "", author = "" } = Astro.props;
 ---
 
 <section
-  class="max-w-2xl px-[var(--margin-h-sektioner-small)] md:px-[var(--margin-h-sektioner-large)]"
+  class="mx-auto max-w-md md:max-w-2xl px-[var(--margin-h-sektioner-small)] md:px-[var(--margin-h-sektioner-large)]"
 >
   <!-- QUOTE -->
-  <div class="float-left mr-4 mb-2 max-w-[11rem] md:max-w-sm">
+  <div class="float-left mb-2 mr-6 max-w-[14rem] md:max-w-sm">
     <Heading
       htmlheading="h3"
       size="small"
@@ -23,14 +23,14 @@ const { title = "", body = "", author = "" } = Astro.props;
 
   <!-- BODY TEXT -->
   <div>
-    <Text texttype="body" weight="regular" color="body">
+    <Text teksttype="body" weight="regular" color="body">
       {body}
     </Text>
   </div>
 
   <!-- AUTHOR -->
-  <div class="mt-4 text-right clear-both">
-    <Text texttype="body" weight="bold" color="label">
+  <div class="text-right clear-both">
+    <Text teksttype="body" weight="bold" color="label">
       {author}
     </Text>
   </div>

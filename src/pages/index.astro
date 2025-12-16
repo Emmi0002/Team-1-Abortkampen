@@ -7,19 +7,11 @@ import LogoInformationBox from "../components/LogoInformationBox.astro";
 import Quote from "../components/Quote.astro";
 import Link from "../components/Link.astro";
 import InformationBox from "../components/InformationBox.astro";
+import Merchcardslider from "../components/merchcardslider.astro";
 ---
 
 <MainLayout title="Abortkampen.dk - Forside">
   <main>
-    <script
-      src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js"
-      type="module"></script>
-    <dotlottie-wc
-      src="https://lottie.host/20e04a39-c123-4c23-9f46-46039b82ec26/u2j3m17Efj.lottie"
-      style="width: 300px;height: 300px"
-      autoplay
-      loop></dotlottie-wc>
-
     <!-- Sex og samfund arbejder for sektion -->
     <LogoInformationBox
       title="Det arbejder Sex & Samfund for "
@@ -28,20 +20,23 @@ import InformationBox from "../components/InformationBox.astro";
       text3="Ingen skal bestemme, hvorvidt du, din søster eller veninde skal have et barn eller ej! Derfor kæmper vi i Sex & Samfund for retten til fri og sikker abort for alle. Forbud mod aborter fører ikke til færre aborter, men til farligere aborter!"
     />
 
+    <!-- Kampen for fri abort sektion -->
     <InformationBox
       title="Kampen for fri abort slutter aldrig"
       subtitle="Din indsats gør en reel forskel!"
       text1="Hos Abortkampen.dk giver vi dig mulighed for at engagere dig aktivt i kampen for fri abort. Du kan gøre en forskel gennem deltagelse i demonstrationer, uddeling af informationsmateriale, oplysningskampagner og andre konkrete aktiviteter, der støtter vores sag."
       text2="Vi arrangerer løbende forskellige events og initiativer, hvor du kan være med – fra gadeaktioner og opslag til informative møder og sociale events med fokus på aktiv deltagelse. Uanset om du har lidt eller meget tid, er der mange måder at bidrage på."
       text3="Tjek vores kommende aktiviteter, og find ud af, hvordan du kan tage del i kampen for rettigheder og forandring."
+      linktext="Engager dig"
+      href="/engagerdig"
     >
-      <div slot="media">
+      <div slot="media" class="mx-auto">
         <script
           src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js"
           type="module"></script>
         <dotlottie-wc
-          src="https://lottie.host/20e04a39-c123-4c23-9f46-46039b82ec26/u2j3m17Efj.lottie"
-          style="width:300px;height:300px"
+          src="https://lottie.host/8bce6f22-cd07-4dbf-8bde-5ebcb4210ff1/0hkPtSaS5K.lottie"
+          class="w-full max-w-full h-auto"
           autoplay
           loop></dotlottie-wc>
       </div>
@@ -61,7 +56,7 @@ import InformationBox from "../components/InformationBox.astro";
       </div>
 
       <!-- Øverst til venstre -->
-      <div class="lg:grid grid-cols-2 grid-rows-2 md:ml-20">
+      <div class="lg:grid grid-cols-2 grid-rows-2">
         <div class="col-start-1 row-start-1 mb-20 md:mb-10">
           <Quote
             title="Jeg havde handlet ud fra omsorg"
@@ -81,7 +76,12 @@ import InformationBox from "../components/InformationBox.astro";
     </section>
 
     <!-- Timeline sektion -->
-    <section>
+    <section
+      class="my-[var(--margin-v-sektioner-xsmall)]
+       px-[var(--margin-h-sektioner-small)]
+       md:my-[var(--margin-v-sektioner-large)]
+       md:px-[var(--margin-h-sektioner-large)]"
+    >
       <div
         class="mx-auto my-[var(--margin-v-sektioner-xsmall)]
        px-[var(--margin-h-sektioner-small)] md:px-[var(--margin-h-sektioner-large)]"
@@ -303,6 +303,13 @@ import InformationBox from "../components/InformationBox.astro";
           </li>
         </ul>
       </div>
+    </section>
+
+    <section
+      class="my-[var(--margin-v-sektioner-xsmall)]
+       md:my-[var(--margin-v-sektioner-large)]"
+    >
+      <Merchcardslider />
     </section>
   </main>
 </MainLayout>

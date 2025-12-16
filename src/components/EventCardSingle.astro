@@ -2,7 +2,16 @@
 import Text from "./Text.astro";
 import Link from "./Link.astro";
 
-const { imagelink = "", imagetext = "", title = "", date = "", location = "", informationtext = "", theme = "infomøde", themeName = "" } = Astro.props;
+const {
+  imagelink = "",
+  imagetext = "",
+  title = "",
+  date = "",
+  location = "",
+  informationtext = "",
+  theme = "infomøde",
+  themeName = "",
+} = Astro.props;
 
 const themeColor = {
   infomøde: "bg-primary",
@@ -11,21 +20,80 @@ const themeColor = {
 };
 ---
 
-<div class="h-full flex flex-col">
-  <div class="relative h-48 flex-shrink-0">
+<div class="flex flex-col">
+  <div class="relative h-60 md:h-70 flex-shrink-0">
     <img class="w-full h-full object-cover" src={imagelink} alt={imagetext} />
-    <div class="absolute bottom-4 left-0 inline-block px-3 py-0.5 rounded-r" class:list={[themeColor[theme]]}>
-      <Text teksttype="subtitle" , stylingclasses="" , weight="regular" , color="body" ,>{themeName}</Text>
+    <div
+      class="absolute bottom-4 left-0 inline-block px-3 py-0.5 rounded-r"
+      class:list={[themeColor[theme]]}
+    >
+      <Text
+        teksttype="subtitle"
+        ,
+        stylingclasses=""
+        ,
+        weight="bold"
+        ,
+        color="body"
+        ,>{themeName}</Text
+      >
     </div>
-    <div class="absolute bottom-0 left-0 w-full h-2" class:list={[themeColor[theme]]}></div>
+    <div
+      class="absolute bottom-0 left-0 w-full h-2"
+      class:list={[themeColor[theme]]}
+    >
+    </div>
   </div>
   <div class="flex-1 flex flex-col">
-    <Text teksttype="headline" , stylingclasses="mb-[var(--spacing-vertical-m)]" , weight="bold" , color="body" ,>{title}</Text>
-    <Text teksttype="subtitle" , stylingclasses="mb-[var(--spacing-vertical-m)]" , weight="light" , color="body" ,>🗓️ {date}</Text>
-    <Text teksttype="subtitle" , stylingclasses="mb-[var(--spacing-vertical-m)]" , weight="light" , color="body" ,>📍 {location}</Text>
-    <Text teksttype="body" , stylingclasses="mb-[var(--spacing-vertical-m)] line-clamp-2" , weight="regular" , color="body" ,>{informationtext}</Text>
+    <Text
+      teksttype="headline"
+      ,
+      stylingclasses="mb-[var(--spacing-vertical-m)]"
+      ,
+      weight="bold"
+      ,
+      color="body"
+      ,>{title}</Text
+    >
+    <Text
+      teksttype="subtitle"
+      ,
+      stylingclasses="mb-[var(--spacing-vertical-m)]"
+      ,
+      weight="light"
+      ,
+      color="body"
+      ,>🗓️ {date}</Text
+    >
+    <Text
+      teksttype="subtitle"
+      ,
+      stylingclasses="mb-[var(--spacing-vertical-m)]"
+      ,
+      weight="light"
+      ,
+      color="body"
+      ,>📍 {location}</Text
+    >
+    <Text
+      teksttype="body"
+      ,
+      stylingclasses="mb-[var(--spacing-vertical-m)] line-clamp-2"
+      ,
+      weight="regular"
+      ,
+      color="body"
+      ,>{informationtext}</Text
+    >
     <div class="mt-auto">
-      <Link href="/singleview" target="_self" variant="linkbutton" size="medium">Læs mere</Link>
+      <Link
+        href="/singleview"
+        target="_self"
+        variant="linkbutton"
+        size="small"
+        buttoncolor="secondary"
+        color="body">Læs mere</Link
+      >
     </div>
   </div>
 </div>

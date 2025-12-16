@@ -80,14 +80,7 @@ import FormLittleLong from "../components/FormLittleLong.astro";
       class="max-[1150px]:ml-[var(--margin-h-sektioner-small)] lg:mx-[var(--margin-h-sektioner-xlarge)]"
     >
       <Heading>Fremtidige events</Heading>
-      <EventCards
-        imagelink="/img/Workshop.webp"
-        imagetext="Event billede 1"
-        title="Infomøde om abortrettigheder"
-        date="12. marts 2024"
-        location="København"
-        informationtext="Deltag i vores infomøde for at lære mere om aktuelle abortrettigheder og hvordan du kan engagere dig."
-      />
+      <EventCards />
     </section>
     <!-- ------------ Sidst engagerede vi os for start --------- -->
     <section
@@ -143,7 +136,9 @@ import FormLittleLong from "../components/FormLittleLong.astro";
           href="/singleview.astro"
           target="_self"
           variant="linkbutton"
-          size="medium">Læs mere om MY BODY MY CHOICE 2026</Link
+          size="small"
+          buttoncolor="secondary"
+          color="body">Læs mere om MY BODY MY CHOICE 2026</Link
         >
       </div>
       <img src="/img/Demonstration.webp" alt="Billede af en demonstration" />

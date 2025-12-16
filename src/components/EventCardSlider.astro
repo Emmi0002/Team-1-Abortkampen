@@ -2,11 +2,13 @@
 import EventCardSingle from "./EventCardSingle.astro";
 ---
 
-<section class="my-[var(--margin-v-sektioner-small)] lg:my-[var(--margin-v-sektioner-large)]">
-  <div class="carousel max-w-full gap-4 pb-4">
+<section
+  class="my-[var(--margin-v-sektioner-small)] lg:my-[var(--margin-v-sektioner-large)]"
+>
+  <div class="carousel max-w-full gap-[var(--spacing-horizontal-2xl)] pb-4">
     <div class="carousel-item max-w-[280px] sm:max-w-[320px]">
       <EventCardSingle
-        imagelink="/img/Workshop.webp"
+        imagelink="/img/infomeeting.webp"
         imagetext="Event billede 1"
         title="Bliv oplyst om kampen"
         date="15. januar 2026"
@@ -18,7 +20,7 @@ import EventCardSingle from "./EventCardSingle.astro";
     </div>
     <div class="carousel-item max-w-[280px] sm:max-w-[320px]">
       <EventCardSingle
-        imagelink="/img/RouteTalk.webp"
+        imagelink="/img/StreetTalk.webp"
         imagetext="Event billede 1"
         title="StreetTalk"
         date="20. februar 2026"
@@ -30,23 +32,11 @@ import EventCardSingle from "./EventCardSingle.astro";
     </div>
     <div class="carousel-item max-w-[280px] sm:max-w-[320px]">
       <EventCardSingle
-        imagelink="/img/MyBodyMyChoice2026.webp"
-        imagetext="Event billede 1"
-        title="MY BODY MY CHOICE 2026"
-        date="20. marts 2026"
-        location="Rådhuspladsen, København"
-        informationtext="Efter den store succes med sidste års markering vender vi stærkere tilbage i år."
-        theme="demonstration"
-        themeName="Demonstration"
-      />
-    </div>
-    <div class="carousel-item max-w-[280px] sm:max-w-[320px]">
-      <EventCardSingle
-        imagelink="/img/Workshop.webp"
+        imagelink="/img/SchoolClass.webp"
         imagetext="Event billede 1"
         title="Kroppen Er Min – skolebesøg"
         date="4. april 2026"
-        location="Ballerup"
+        location="Sjælland"
         informationtext="Vores frivillige team tager ud til lokale skoler for at tale om retten til egen krop, grænser og samtykke – og give unge viden, de kan bruge i deres hverdag."
         theme="infomøde"
         themeName="Infomøde"

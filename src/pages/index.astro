@@ -5,11 +5,12 @@ import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
 import LogoInformationBox from "../components/LogoInformationBox.astro";
 import Quote from "../components/Quote.astro";
+import Link from "../components/Link.astro";
+import InformationBox from "../components/InformationBox.astro";
 ---
 
 <MainLayout title="Abortkampen.dk - Forside">
-  <main class="container mx-auto p-4">
-    <Heading htmlheading="h1">Lav noget flot!</Heading>
+  <main>
     <script
       src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js"
       type="module"></script>
@@ -27,6 +28,25 @@ import Quote from "../components/Quote.astro";
       text3="Ingen skal bestemme, hvorvidt du, din søster eller veninde skal have et barn eller ej! Derfor kæmper vi i Sex & Samfund for retten til fri og sikker abort for alle. Forbud mod aborter fører ikke til færre aborter, men til farligere aborter!"
     />
 
+    <InformationBox
+      title="Kampen for fri abort slutter aldrig"
+      subtitle="Din indsats gør en reel forskel!"
+      text1="Hos Abortkampen.dk giver vi dig mulighed for at engagere dig aktivt i kampen for fri abort. Du kan gøre en forskel gennem deltagelse i demonstrationer, uddeling af informationsmateriale, oplysningskampagner og andre konkrete aktiviteter, der støtter vores sag."
+      text2="Vi arrangerer løbende forskellige events og initiativer, hvor du kan være med – fra gadeaktioner og opslag til informative møder og sociale events med fokus på aktiv deltagelse. Uanset om du har lidt eller meget tid, er der mange måder at bidrage på."
+      text3="Tjek vores kommende aktiviteter, og find ud af, hvordan du kan tage del i kampen for rettigheder og forandring."
+    >
+      <div slot="media">
+        <script
+          src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js"
+          type="module"></script>
+        <dotlottie-wc
+          src="https://lottie.host/20e04a39-c123-4c23-9f46-46039b82ec26/u2j3m17Efj.lottie"
+          style="width:300px;height:300px"
+          autoplay
+          loop></dotlottie-wc>
+      </div>
+    </InformationBox>
+
     <!-- Personlige historier sektion -->
     <section
       class="my-[var(--margin-v-sektioner-xsmall)]
@@ -39,8 +59,9 @@ import Quote from "../components/Quote.astro";
           Hver beslutning har sin historie
         </Heading>
       </div>
+
       <!-- Øverst til venstre -->
-      <div class="lg:grid grid-cols-2 grid-rows-2">
+      <div class="lg:grid grid-cols-2 grid-rows-2 md:ml-20">
         <div class="col-start-1 row-start-1 mb-20 md:mb-10">
           <Quote
             title="Jeg havde handlet ud fra omsorg"
@@ -56,6 +77,231 @@ import Quote from "../components/Quote.astro";
             author="Sofia, 19 år"
           />
         </div>
+      </div>
+    </section>
+
+    <!-- Timeline sektion -->
+    <section>
+      <div
+        class="mx-auto my-[var(--margin-v-sektioner-xsmall)]
+       px-[var(--margin-h-sektioner-small)] md:px-[var(--margin-h-sektioner-large)]"
+      >
+        <Heading htmlheading="h2" size="medium" weight="heavy" color="body">
+          Årstal vi sammen skal være <span class="text-secondary">stolte</span> over
+        </Heading>
+      </div>
+
+      <div class="carousel overflow-x-auto">
+        <ul class="timeline timeline-horizontal">
+          <!-- box 1 - Irland 2018 -->
+          <li>
+            <hr class="bg-accent" />
+            <div class="timeline-start ml-10 md:ml-20">
+              <div
+                class="timeline-box bg-base-300 flex flex-row max-w-60 md:max-w-xs gap-5 items-center"
+              >
+                <img
+                  src="/img/Timeline/IrishGirl.webp"
+                  alt="Irland flag"
+                  class="w-20 h-20 md:w-30 md:h-30 object-cover"
+                />
+                <Text teksttype="body" weight="regular">
+                  Ophævelse af tidligere forbud mod abort i Irland
+                </Text>
+              </div>
+              <div class="flex justify-end">
+                <Text teksttype="subtitle" weight="bold" color="label"
+                  >24. Marts 2020</Text
+                >
+              </div>
+              <div class="flex justify-center w-full">
+                <div class="w-1 h-15 bg-accent rounded-full"></div>
+              </div>
+            </div>
+            <hr class="bg-accent" />
+          </li>
+
+          <!-- box 2 - New Zealand 2020 -->
+          <li>
+            <hr class="bg-accent" />
+            <div class="timeline-end">
+              <div class="flex justify-center w-full">
+                <div class="w-1 h-15 bg-accent rounded-full mb-5"></div>
+              </div>
+              <div
+                class="timeline-box bg-base-300 flex flex-row max-w-60 md:max-w-xs gap-5 items-center"
+              >
+                <img
+                  src="/img/Timeline/NewZeland Parlamentarium.webp"
+                  alt="New Zealand flag"
+                  class="w-20 h-20 md:w-30 md:h-30 object-cover"
+                />
+                <Text teksttype="body" weight="regular">
+                  Afkriminalisering af abort i New Zealand
+                </Text>
+              </div>
+              <div class="flex justify-end">
+                <Text teksttype="subtitle" weight="bold" color="label"
+                  >24. Marts 2020</Text
+                >
+              </div>
+            </div>
+            <hr class="bg-accent" />
+          </li>
+
+          <!-- box 3 - Finland 2023 -->
+          <li>
+            <hr class="bg-accent" />
+            <div class="timeline-start">
+              <div
+                class="timeline-box bg-base-300 flex flex-row max-w-60 md:max-w-xs gap-5 items-center"
+              >
+                <img
+                  src="/img/Timeline/Doctor.webp"
+                  alt="Finland flag"
+                  class="w-20 h-20 md:w-30 md:h-30 object-cover"
+                />
+                <Text teksttype="body" weight="regular">
+                  Kvinder i Finland kan få abort uden begrundelse op til 12. uge
+                </Text>
+              </div>
+              <div class="flex justify-end">
+                <Text teksttype="subtitle" weight="bold" color="label"
+                  >1. September 2023</Text
+                >
+              </div>
+              <div class="flex justify-center w-full">
+                <div class="w-1 h-15 bg-accent rounded-full"></div>
+              </div>
+            </div>
+            <hr class="bg-accent" />
+          </li>
+
+          <!-- box 4 - Australien 2023 -->
+          <li>
+            <hr class="bg-accent" />
+            <div class="timeline-end">
+              <div class="flex justify-center w-full">
+                <div class="w-1 h-15 bg-accent rounded-full mb-5"></div>
+              </div>
+              <div
+                class="timeline-box bg-base-300 flex flex-row max-w-60 md:max-w-xs gap-5 items-center"
+              >
+                <img
+                  src="/img/Timeline/AustraliaFlag.webp"
+                  alt="Australien flag"
+                  class="w-20 h-20 md:w-30 md:h-30 object-cover"
+                />
+                <Text teksttype="body" weight="regular">
+                  Western Australia vedtager "Abortion Legislation Reform Act"
+                </Text>
+              </div>
+              <div class="flex justify-end">
+                <Text teksttype="subtitle" weight="bold" color="label"
+                  >27. September 2023</Text
+                >
+              </div>
+            </div>
+            <hr class="bg-accent" />
+          </li>
+
+          <!-- box 5 - Danmark 2024 -->
+          <li>
+            <hr class="bg-accent" />
+            <div class="timeline-start">
+              <div
+                class="timeline-box bg-base-300 flex flex-row max-w-60 md:max-w-xs gap-5 items-center"
+              >
+                <img
+                  src="/img/Timeline/Stethoscope.webp"
+                  alt="Danmark flag"
+                  class="w-20 h-20 md:w-30 md:h-30 object-cover"
+                />
+                <Text teksttype="body" weight="regular">
+                  Abortgrænsen i Danmark hæves fra 12. til 18. uge
+                </Text>
+              </div>
+              <div class="flex justify-end">
+                <Text teksttype="subtitle" weight="bold" color="label"
+                  >3. Maj 2024</Text
+                >
+              </div>
+              <div class="flex justify-center w-full">
+                <div class="w-1 h-15 bg-accent rounded-full"></div>
+              </div>
+            </div>
+            <hr class="bg-accent" />
+          </li>
+
+          <!-- box 6 - Norge 2025 -->
+          <li>
+            <hr class="bg-accent" />
+            <div class="timeline-end">
+              <div class="flex justify-center w-full">
+                <div class="w-1 h-15 bg-accent rounded-full mb-5"></div>
+              </div>
+              <div
+                class="timeline-box bg-base-300 flex flex-row max-w-60 md:max-w-xs gap-5 items-center"
+              >
+                <img
+                  src="/img/Timeline/NorwayNature.webp"
+                  alt="Norge flag"
+                  class="w-20 h-20 md:w-30 md:h-30 object-cover"
+                />
+                <Text teksttype="body" weight="regular">
+                  Abortgrænsen i Norge hæves fra 12. til 18. uge
+                </Text>
+              </div>
+              <div class="flex justify-end">
+                <Text teksttype="subtitle" weight="bold" color="label"
+                  >1. Juni 2025</Text
+                >
+              </div>
+            </div>
+            <hr class="bg-accent" />
+          </li>
+
+          <!-- box 7 - Færøerne 2025 -->
+          <li>
+            <hr class="bg-accent" />
+            <div class="timeline-start">
+              <div
+                class="timeline-box bg-base-300 flex flex-row max-w-60 md:max-w-xs gap-5 items-center"
+              >
+                <img
+                  src="/img/Timeline/FaroeFlag.webp"
+                  alt="Færøerne flag"
+                  class="w-20 h-20 md:w-30 md:h-30 object-cover"
+                />
+                <Text texttype="body" weight="regular">
+                  Fri abort vedtaget på Færøerne
+                </Text>
+              </div>
+              <div class="flex justify-end">
+                <Text teksttype="subtitle" weight="bold" color="label"
+                  >4. December 2025</Text
+                >
+              </div>
+              <div class="flex justify-center w-full">
+                <div class="w-1 h-15 bg-accent rounded-full"></div>
+              </div>
+            </div>
+            <hr class="bg-accent" />
+          </li>
+
+          <!-- Se fremtidige events knap -->
+          <li>
+            <hr class="bg-accent" />
+            <div class="timeline-end">
+              <div class="mt-5 mr-10">
+                <Link href="/engagerdig" variant="linkbutton">
+                  Se fremtidige events
+                </Link>
+              </div>
+            </div>
+            <hr class="bg-accent" />
+          </li>
+        </ul>
       </div>
     </section>
   </main>

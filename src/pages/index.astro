@@ -3,12 +3,60 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
+import LogoInformationBox from "../components/LogoInformationBox.astro";
+import Quote from "../components/Quote.astro";
 ---
 
 <MainLayout title="Abortkampen.dk - Forside">
   <main class="container mx-auto p-4">
     <Heading htmlheading="h1">Lav noget flot!</Heading>
-    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js" type="module"></script>
-    <dotlottie-wc src="https://lottie.host/20e04a39-c123-4c23-9f46-46039b82ec26/u2j3m17Efj.lottie" style="width: 300px;height: 300px" autoplay loop></dotlottie-wc>
+    <script
+      src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js"
+      type="module"></script>
+    <dotlottie-wc
+      src="https://lottie.host/20e04a39-c123-4c23-9f46-46039b82ec26/u2j3m17Efj.lottie"
+      style="width: 300px;height: 300px"
+      autoplay
+      loop></dotlottie-wc>
+
+    <!-- Sex og samfund arbejder for sektion -->
+    <LogoInformationBox
+      title="Det arbejder Sex & Samfund for "
+      text1="I Danmark har vi haft ret til sikker og lovlig abort siden 1973. Men det er ikke en ret, vi kan tage for givet. Udviklingen i lande som Polen og USA viser, at retten til sikker og lovlig abort er en ret, der skal værnes om. Selv i Danmark er der modstand mod kvinders ret til selv at vælge, om de vil have en abort eller ej."
+      text2="Vi arbejder for alle piger og kvinders ret til at få en abort. I Danmark tilbyder vi gratis rådgivning, og internationalt kæmper vi sammen med lokale aktivister og organisationer."
+      text3="Ingen skal bestemme, hvorvidt du, din søster eller veninde skal have et barn eller ej! Derfor kæmper vi i Sex & Samfund for retten til fri og sikker abort for alle. Forbud mod aborter fører ikke til færre aborter, men til farligere aborter!"
+    />
+
+    <!-- Personlige historier sektion -->
+    <section
+      class="my-[var(--margin-v-sektioner-xsmall)]
+       px-[var(--margin-h-sektioner-small)]
+       md:my-[var(--margin-v-sektioner-large)]
+       md:px-[var(--margin-h-sektioner-large)]"
+    >
+      <div class="mb-[var(--margin-v-sektioner-xsmall)] text-center">
+        <Heading htmlheading="h2" size="medium" weight="heavy" color="body">
+          Hver beslutning har sin historie
+        </Heading>
+      </div>
+      <!-- Øverst til venstre -->
+      <div class="lg:grid grid-cols-2 grid-rows-2">
+        <div class="col-start-1 row-start-1 mb-20 md:mb-10">
+          <Quote
+            title="Jeg havde handlet ud fra omsorg"
+            body="Jeg var 24, da jeg valgte abort. Efter indgrebet føltes stilheden tung, og jeg tvivlede på mig selv. Da min veninde kom forbi og bare sad hos mig, forsvandt noget af ensomheden. Beslutningen var stadig tung, men jeg begyndte at se, at jeg havde handlet ud fra omsorg; både for mig selv og det liv, jeg endnu ikke var klar til at tage ansvar for."
+            author="Caroline, 24 år"
+          />
+        </div>
+        <!-- Nederst til højre -->
+        <div class="col-start-2 row-start-2">
+          <Quote
+            title="En beslutning jeg voksede af"
+            body="Jeg blev gravid midt i et forhold, der var ved at gå i stykker, og vi besluttede sammen, at en abort var det rigtige. Det var en følelsesmæssigt svær tid, men efter nogle ugers refleksion mærkede jeg ro. Oplevelsen lærte mig, at jeg kan træffe svære valg og stå stærkere bagefter."
+            author="Sofia, 19 år"
+          />
+        </div>
+      </div>
+    </section>
   </main>
 </MainLayout>

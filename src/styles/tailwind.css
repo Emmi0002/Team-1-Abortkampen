@@ -22,7 +22,6 @@
   font-style: normal;
 }
 
-
 :root {
   /* spacing */
   --spacing-horizontal-xs: 8px;
@@ -32,13 +31,19 @@
   --spacing-horizontal-m: 20px;
   --spacing-vertical-m: 12px;
   --spacing-horizontal-l: 24px;
+  --spacing-horizontal-xl: 32px;
+  --spacing-horizontal-2xl: 48px;
   --spacing-vertical-l: 16px;
   --spacing-large: 24px;
   --spacing-component-token: 12px;
+  --margin-v-sektioner-xsmall: 50px;
   --margin-v-sektioner-small: 90px;
   --margin-v-sektioner-large: 100px;
   --margin-h-sektioner-small: 20px;
+  --margin-h-sektioner-medium: 70px;
   --margin-h-sektioner-large: 50px;
+  --margin-h-sektioner-xlarge: 250px;
+  --gap-h-large: 60px;
 
   /* radius */
   --radius-xs: 4px;
@@ -50,9 +55,6 @@
 }
 
 @theme {
-  --color-text-label: #572d75;
-  --color-surface-subtle: #efe8f8;
-  --color-surface-input: #fcfaeb;
   /* typografi */
   --font-heading-heavy: "AvenirNextHeavy", sans-serif;
   --font-heading-bold: "AvenirNextBold", sans-serif;
@@ -67,11 +69,11 @@
   --color-base-200: oklch(98% 0 0);
   --color-base-300: oklch(95% 0 0);
   --color-base-content: oklch(21% 0.006 285.885);
-  --color-primary: #FFde02;
+  --color-primary: #ffde02;
   --color-primary-content: #241e21;
   --color-secondary: #f73288;
   --color-secondary-content: #fcfcfc;
-  --color-accent: #FFCFE7;
+  --color-accent: #ffcfe7;
   --color-accent-content: oklch(38% 0.063 188.416);
   --color-neutral: #241e21;
   --color-neutral-content: #fcfcfc;

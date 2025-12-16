@@ -1,10 +1,16 @@
 ---
 // Henter parametrene fra Astro.props
-const { teksttype = "", stylingclasses = "", weight = "Regular", color = "negative" } = Astro.props;
+
+const {
+  teksttype = "",
+  stylingclasses = "",
+  weight = "regular",
+  color = "body",
+} = Astro.props;
 
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige størrelser.
 const sizeClasses = {
-  headline: "text-[13px] md:text-[16px] lg:text-[20px] uppercase",
+  headline: "text-[13px] md:text-[16px] lg:text-[20px]",
   body: "text-[12px] md:text-[13px] lg:text-[16px]",
   subtitle: "text-[11px] md:text-[11px] lg:text-[14px]",
   caption: "text-[24px] md:text-[35px] lg:text-[70px]",
@@ -14,14 +20,15 @@ const sizeClasses = {
 // Tailwind font-weight / Roboto
 const typeClasses = {
   light: "font-light font-RobotoLight",
-  regular: " font-normal font-RobotoRegular",
+  regular: "font-normal font-RobotoRegular",
   bold: "font-bold font-RobotoBold",
+  heavyavenir: "font-heavy font-AvenirNextHeavy",
 };
 
 const colorClasses = {
-  label: "text-[var(--color-text-label)]",
-  body: "text-[var(--color-base-content)]",
-  negative: "text-[var(--neutral-content)]",
+  label: "text-secondary",
+  body: "text-base-content",
+  negative: "text-neutral-content",
 };
 ---
 

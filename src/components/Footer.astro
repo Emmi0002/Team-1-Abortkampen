@@ -5,7 +5,7 @@ import Heading from "./Heading.astro";
 ---
 
 <section
-  class="bg-accent sm:flex justify-around items-center py-[var(--margin-v-sektioner-small)] px-[var(--margin-h-sektioner-small)] md:px-[var(--margin-h-sektioner-large)]"
+  class="bg-accent md:flex justify-around items-center gap-10 py-[var(--margin-v-sektioner-small)] px-[var(--margin-h-sektioner-small)] md:px-[var(--margin-h-sektioner-large)]"
   x-data="{ subscribed: false }"
 >
   <div>
@@ -15,18 +15,20 @@ import Heading from "./Heading.astro";
     </Text>
   </div>
 
-  <fieldset class="fieldset" x-show="!subscribed">
-    <div class="join border border-secondary rounded-none">
+  <fieldset class="fieldset w-full sm:w-auto" x-show="!subscribed">
+    <div class="join border border-secondary rounded-none w-full sm:w-[28rem]">
       <input
         type="email"
         placeholder="Email adresse"
-        class="input join-item border-0 rounded-none"
+        class="input join-item border-0 rounded-none
+             lg:h-14 lg:px-4 text-base w-full"
         required
         x-model="email"
       />
       <button
         type="submit"
-        class="btn join-item bg-secondary text-neutral-content border-0 rounded-none"
+        class="btn join-item bg-secondary text-neutral-content
+             border-0 rounded-none lg:h-14 lg:px-6"
         @click.prevent="subscribed = true"
       >
         TILMELD
@@ -54,23 +56,25 @@ import Heading from "./Heading.astro";
     </Text>
     <Link href="tel:+4533931010" variant="footerlink" size="small">
       <img src="/img/Icons/Phone.webp" alt="Telefon" class="w-8 h-8" />
-      <Text teksttype="body" color="negative" weight="regular">
-        Tlf. 33 93 10 10
-      </Text>
+
+      Tlf. 33 93 10 10
     </Link>
 
-    <Link variant="footerlink" size="small">
+    <Link
+      href="https://www.google.com/maps/search/?api=1&query=Lergravsvej+63,+2300+København+S"
+      target="_blank"
+      variant="footerlink"
+      size="small"
+    >
       <img src="/img/Icons/Mappin.webp" alt="Telefon" class="w-8 h-8" />
-      <Text teksttype="body" color="negative" weight="regular">
-        Lergravsvej 63, 2. sal <br /> 2300 København S
-      </Text>
+
+      Lergravsvej 63, 2. sal <br /> 2300 København S
     </Link>
 
     <Link href="mailto:info@sexogsamfund.dk" variant="footerlink" size="small">
       <img src="/img/Icons/Mail.webp" alt="Telefon" class="w-8 h-8" />
-      <Text teksttype="body" color="negative" weight="regular">
-        info@sexogsamfund.dk
-      </Text>
+
+      Info@sexogsamfund.dk
     </Link>
   </nav>
 

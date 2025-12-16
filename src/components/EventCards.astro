@@ -3,11 +3,13 @@ import EventCardSingle from "./EventCardSingle.astro";
 ---
 
 <!-- Slider for mobile/tablet (hidden on lg) -->
-<section class="lg:hidden my-[var(--margin-v-sektioner-small)] lg:my-[var(--margin-v-sektioner-large)]">
+<section
+  class="lg:hidden my-[var(--margin-v-sektioner-small)] lg:my-[var(--margin-v-sektioner-large)]"
+>
   <div class="carousel max-w-full gap-4 pb-4">
     <div class="carousel-item max-w-[280px] sm:max-w-[320px]">
       <EventCardSingle
-        imagelink="/img/Workshop.webp"
+        imagelink="/img/infomeeting.webp"
         imagetext="Event billede 1"
         title="Bliv oplyst om kampen"
         date="15. januar 2026"
@@ -19,7 +21,7 @@ import EventCardSingle from "./EventCardSingle.astro";
     </div>
     <div class="carousel-item max-w-[280px] sm:max-w-[320px]">
       <EventCardSingle
-        imagelink="/img/RouteTalk.webp"
+        imagelink="/img/StreetTalk.webp"
         imagetext="Event billede 1"
         title="StreetTalk"
         date="20. februar 2026"
@@ -43,7 +45,7 @@ import EventCardSingle from "./EventCardSingle.astro";
     </div>
     <div class="carousel-item max-w-[280px] sm:max-w-[320px]">
       <EventCardSingle
-        imagelink="/img/Workshop.webp"
+        imagelink="/img/SchoolClass.webp"
         imagetext="Event billede 1"
         title="Kroppen Er Min – skolebesøg"
         date="4. april 2026"
@@ -81,9 +83,16 @@ import EventCardSingle from "./EventCardSingle.astro";
 </section>
 
 <!-- Grid for desktop (hidden below lg) -->
-<section class="hidden lg:grid grid-cols-3 gap-[var(--spacing-horizontal-xl)] my-[var(--margin-v-sektioner-small)] lg:my-[var(--margin-v-sektioner-large)] items-stretch">
+<section
+  class="hidden lg:grid
+         grid-cols-[repeat(auto-fit,minmax(20rem,1fr))]
+         gap-[var(--spacing-horizontal-xl)]
+         my-[var(--margin-v-sektioner-small)]
+         lg:my-[var(--margin-v-sektioner-large)]
+         items-stretch"
+>
   <EventCardSingle
-    imagelink="/img/Workshop.webp"
+    imagelink="/img/infomeeting.webp"
     imagetext="Event billede 1"
     title="Bliv oplyst om kampen"
     date="15. januar 2026"
@@ -93,7 +102,7 @@ import EventCardSingle from "./EventCardSingle.astro";
     themeName="Infomøde"
   />
   <EventCardSingle
-    imagelink="/img/RouteTalk.webp"
+    imagelink="/img/StreetTalk.webp"
     imagetext="Event billede 1"
     title="StreetTalk"
     date="20. februar 2026"
@@ -113,11 +122,11 @@ import EventCardSingle from "./EventCardSingle.astro";
     themeName="Demonstration"
   />
   <EventCardSingle
-    imagelink="/img/Workshop.webp"
+    imagelink="/img/SchoolClass.webp"
     imagetext="Event billede 1"
     title="Kroppen Er Min – skolebesøg"
     date="4. april 2026"
-    location="Ballerup"
+    location="Sjælland"
     informationtext="Vores frivillige team tager ud til lokale skoler for at tale om retten til egen krop, grænser og samtykke – og give unge viden, de kan bruge i deres hverdag."
     theme="infomøde"
     themeName="Infomøde"

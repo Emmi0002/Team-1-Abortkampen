@@ -39,8 +39,7 @@
   --spacing-large: 24px;
   --spacing-component-token: 12px;
 
-  --margin-v-sektioner-small: 50px;
-  --margin-v-sektioner-large: 70px;
+  /* margin sektioner */
   --margin-v-sektioner-xsmall: 50px;
   --margin-v-sektioner-small: 90px;
   --margin-v-sektioner-large: 100px;
@@ -57,6 +56,14 @@
   --radius-l: 12px;
   --radius-xl: 16px;
   --radius-full: 9999px;
+
+  /* Form variables */
+  --border-size: 3px;
+  --padding-large: 30px;
+  --padding-small: 25px;
+  --gap-h-large: 20px;
+  --gap-h-small: 12px;
+  --gap-v: 12px;
 }
 
 @theme {

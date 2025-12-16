@@ -4,8 +4,8 @@ import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Link from "../components/Link.astro";
 import Button from "../components/Button.astro";
-import { Image } from "astro:assets";
-import thumbsup from "../assets/images/thumbsup.png";
+import LogoInformationBox from "../components/LogoInformationBox.astro";
+import Quote from "../components/Quote.astro";
 ---
 
 <MainLayout title="Abortkampen.dk - Komponentbibliotek">
@@ -244,39 +244,40 @@ import thumbsup from "../assets/images/thumbsup.png";
     <hr class="my-15" />
 
     <!-- Link komponent instanser -->
-    <sectionc class="my-15">
+    <section class="my-15">
       <Heading htmlheading="h2" size="medium">Links</Heading>
 
+      <!-- Textlink -->
       <div class="my-10">
         <Heading htmlheading="h3" size="small" weight="bold">Textlink</Heading>
         <Text teksttype="body">
-          Default linket er en del af en tekst, og burde gerne fungere som et <Link
-            href="#">textlink her</Link
-          > i en paragraf.
+          Et textlink bruges som del af en tekst, fx:
+          <Link href="#" color="body">Klik her for mere information</Link> i denne
+          sætning.
         </Text>
       </div>
 
-      <div class="my-10 bg-primary-content">
+      <!-- Footerlink -->
+      <div class="my-10 bg-primary-content p-4 rounded">
         <Heading htmlheading="h3" size="small" weight="bold" color="negative"
           >Footerlink</Heading
         >
-        <div class="flex gap-6">
+        <div class="flex gap-6 mt-2">
           <Link href="#" variant="footerlink">Om os</Link>
           <Link href="#" variant="footerlink">Handelsbetingelser</Link>
-          <Link href="#" variant="footerlink">Persondata og cookiepolitik</Link>
+          <Link href="#" variant="footerlink">Persondata & cookiepolitik</Link>
         </div>
       </div>
 
+      <!-- Link-knap -->
       <div class="my-10">
         <Heading htmlheading="h3" size="small" weight="bold">Link Knap</Heading>
-        <Text teksttype="body" stylingclasses="mb-6"
-          >Responsive padding (mobile/sm/md):</Text
-        >
-        <div>
-          <Link href="#" variant="linkbutton">Link Knap</Link>
-        </div>
+        <Text teksttype="body" stylingclasses="mb-4">
+          En link-knap kan bruges som call-to-action:
+        </Text>
+        <Link href="#" variant="linkbutton">Læs mere</Link>
       </div>
-    </sectionc>
+    </section>
     <!-- Slut på Link komponent instanser -->
 
     <hr class="my-15" />
@@ -297,6 +298,79 @@ import thumbsup from "../assets/images/thumbsup.png";
         </div>
       </div>
     </section>
+    <!-- Slut på Buttons komponent instanser -->
+
+    <hr class="my-15" />
+
+    <!-- EventCards -->
+    <section class="my-15">
+      <div class="mb-6">
+        <Heading htmlheading="h2" size="medium">EventCards</Heading>
+      </div>
+    </section>
+    <!-- Slut på EventCards -->
+
+    <hr class="my-15" />
+
+    <!-- MerchCards -->
+    <section class="my-15">
+      <div class="mb-6">
+        <Heading htmlheading="h2" size="medium">MerchCards</Heading>
+      </div>
+    </section>
+    <!-- Slut på MerchCards -->
+
+    <hr class="my-15" />
+
+    <!-- Form  -->
+    <section class="my-15">
+      <div class="mb-6">
+        <Heading htmlheading="h2" size="medium">Form</Heading>
+      </div>
+    </section>
+    <!-- Slut på Form Little Long -->
+
+    <hr class="my-15" />
+
+    <!-- Informations box -->
+    <section class="my-15">
+      <div class="mb-6">
+        <Heading htmlheading="h2" size="medium">Informations box</Heading>
+      </div>
+    </section>
+    <!-- Slut på Informations box -->
+
+    <hr class="my-15" />
+
+    <!-- Informations box med logo -->
+    <section class="my-15">
+      <div class="mb-6">
+        <Heading htmlheading="h2" size="medium">Logo Informations box</Heading>
+      </div>
+      <LogoInformationBox
+        title="Vi er Sex & Samfund"
+        text1="I mere end 60 år har vi kæmpet for retten til at bestemme over sin egen krop. Hvad der startede med en gruppe kvindelige lægers kamp for at forhindre uønskede graviditeter for kvinder i Danmark, er nu vokset til en kamp for alle menneskers seksuelle sundhed og rettigheder i og uden for Danmarks grænser. Og kampen er lige så vigtig, som den var dengang."
+        text2="Siden læge Agnete Bræstrup tog de første spadestik til organisationens grundlæggelse, har vi været medlem af verdens førende familieplanlægningsorganisation, International Planned Parenthood Federation (IPPF)."
+        text3="Med seksualoplysning og -undervisning som kerneområder arbejder vi for alle menneskers ret til at bestemme over egen krop, køn og seksualitet. Sex & Samfund er strategisk partner til Udenrigsministeriet og har projekter med lokale partnere i blandt andet Kenya og Uganda."
+      />
+    </section>
+    <!-- Slut på Informations box med logo -->
+
+    <hr class="my-15" />
+
+    <!-- Personlige historier quote box -->
+    <section class="my-15">
+      <div class="mb-6">
+        <Heading htmlheading="h2" size="medium"
+          >Quote box - Personlige historier
+        </Heading>
+      </div>
+      <Quote
+        title="Jeg havde handlet ud fra omsorg"
+        body="Jeg var 24, da jeg valgte abort. Efter indgrebet føltes stilheden tung, og jeg tvivlede på mig selv. Da min veninde kom forbi og bare sad hos mig, forsvandt noget af ensomheden. Beslutningen var stadig tung, men jeg begyndte at se, at jeg havde handlet ud fra omsorg; både for mig selv og det liv, jeg endnu ikke var klar til at tage ansvar for."
+        author="Caroline, 24 år"
+      />
+    </section>
+    <!-- slut på quote box - Personlige historier -->
   </main>
-  <!-- Slut på Buttons komponent instanser -->
 </MainLayout>

@@ -1,6 +1,12 @@
 ---
 // Henter parametrene fra Astro.props
-const { teksttype = "", stylingclasses = "", weight = "regular", color = "negative" } = Astro.props;
+
+const {
+  teksttype = "",
+  stylingclasses = "",
+  weight = "regular",
+  color = "body",
+} = Astro.props;
 
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige størrelser.
 const sizeClasses = {
@@ -20,7 +26,7 @@ const typeClasses = {
 };
 
 const colorClasses = {
-  label: "text-text-label",
+  label: "text-secondary",
   body: "text-base-content",
   negative: "text-neutral-content",
 };

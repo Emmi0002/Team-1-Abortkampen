@@ -41,6 +41,9 @@
 
   --margin-v-sektioner-small: 50px;
   --margin-v-sektioner-large: 70px;
+  --margin-v-sektioner-xsmall: 50px;
+  --margin-v-sektioner-small: 90px;
+  --margin-v-sektioner-large: 100px;
   --margin-h-sektioner-small: 20px;
   --margin-h-sektioner-medium: 70px;
   --margin-h-sektioner-large: 50px;
@@ -57,9 +60,6 @@
 }
 
 @theme {
-  --color-text-label: #572d75;
-  --color-surface-subtle: #efe8f8;
-  --color-surface-input: #fcfaeb;
   /* typografi */
   --font-heading-heavy: "AvenirNextHeavy", sans-serif;
   --font-heading-bold: "AvenirNextBold", sans-serif;

@@ -9,6 +9,7 @@ import Link from "../components/Link.astro";
 import InformationBox from "../components/InformationBox.astro";
 import Merchcardslider from "../components/merchcardslider.astro";
 import Infostat from "../components/Infostat.astro";
+import FormLittleLong from "../components/FormLittleLong.astro";
 ---
 
 <MainLayout title="Abortkampen.dk - Forside">
@@ -303,7 +304,7 @@ import Infostat from "../components/Infostat.astro";
             <hr class="bg-accent" />
             <div class="timeline-end">
               <div class="mt-5 mr-10">
-                <Link href="/engagerdig" variant="linkbutton"> Se fremtidige events </Link>
+                <Link href="/engagerdig" variant="linkbutton" color="body" buttoncolor="secondary"> Se fremtidige events </Link>
               </div>
             </div>
             <hr class="bg-accent" />
@@ -315,6 +316,10 @@ import Infostat from "../components/Infostat.astro";
     <section class="my-[var(--margin-v-sektioner-xsmall)]
        md:my-[var(--margin-v-sektioner-large)]">
       <Merchcardslider />
+    </section>
+    <!-- lille støt formular -->
+    <section>
+      <FormLittleLong />
     </section>
   </main>
 </MainLayout>

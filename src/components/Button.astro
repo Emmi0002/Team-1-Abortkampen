@@ -18,18 +18,17 @@ const sizeClasses = {
 
 <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->{
   variant === "secondary" ? (
-    <button class:list={[variantClasses[variant], sizeClasses[size]]} x-data="{ clicked: false }" x-on:click="clicked = !clicked" x-bind:class="clicked ? '!bg-secondary !border-secondary !text-neutral-content' : ''">
-      <Text teksttype="body">
-        {" "}
-        <slot />{" "}
-      </Text>
+    <button
+      class:list={[variantClasses[variant], sizeClasses[size]]}
+      x-data="{ clicked: false }"
+      x-on:click="clicked = !clicked"
+      x-bind:class="clicked ? '!bg-secondary !border-secondary !text-neutral-content' : ''"
+    >
+      <slot />
     </button>
   ) : (
     <button class:list={[variantClasses[variant], sizeClasses[size]]}>
-      <Text teksttype="body">
-        {" "}
-        <slot />{" "}
-      </Text>
+      <slot />
     </button>
   )
 }

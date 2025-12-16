@@ -2,8 +2,7 @@
 import EventCardSingle from "./EventCardSingle.astro";
 ---
 
-<!-- Slider for mobile/tablet (hidden on lg) -->
-<section class="lg:hidden my-[var(--margin-v-sektioner-small)] lg:my-[var(--margin-v-sektioner-large)]">
+<section class="my-[var(--margin-v-sektioner-small)] lg:my-[var(--margin-v-sektioner-large)]">
   <div class="carousel max-w-full gap-4 pb-4">
     <div class="carousel-item max-w-[280px] sm:max-w-[320px]">
       <EventCardSingle
@@ -78,68 +77,4 @@ import EventCardSingle from "./EventCardSingle.astro";
       />
     </div>
   </div>
-</section>
-
-<!-- Grid for desktop (hidden below lg) -->
-<section class="hidden lg:grid grid-cols-3 gap-[var(--spacing-horizontal-xl)] my-[var(--margin-v-sektioner-small)] lg:my-[var(--margin-v-sektioner-large)] items-stretch">
-  <EventCardSingle
-    imagelink="/img/Workshop.webp"
-    imagetext="Event billede 1"
-    title="Bliv oplyst om kampen"
-    date="15. januar 2026"
-    location="København S"
-    informationtext="Kom til vores infomøde og bliv klogere på kampen for retten til egen krop og hvordan du selv kan engagere dig."
-    theme="infomøde"
-    themeName="Infomøde"
-  />
-  <EventCardSingle
-    imagelink="/img/RouteTalk.webp"
-    imagetext="Event billede 1"
-    title="StreetTalk"
-    date="20. februar 2026"
-    location="København"
-    informationtext="Gå med ud på gaden og tal med folk om retten til egen krop, og vær med til at sprede viden og engagere andre aktivt."
-    theme="oplysningskampagne"
-    themeName="Oplysningskampagne"
-  />
-  <EventCardSingle
-    imagelink="/img/MyBodyMyChoice2026.webp"
-    imagetext="Event billede 1"
-    title="MY BODY MY CHOICE 2026"
-    date="20. marts 2026"
-    location="Rådhuspladsen, København"
-    informationtext="Efter den store succes med sidste års markering vender vi stærkere tilbage i år."
-    theme="demonstration"
-    themeName="Demonstration"
-  />
-  <EventCardSingle
-    imagelink="/img/Workshop.webp"
-    imagetext="Event billede 1"
-    title="Kroppen Er Min – skolebesøg"
-    date="4. april 2026"
-    location="Ballerup"
-    informationtext="Vores frivillige team tager ud til lokale skoler for at tale om retten til egen krop, grænser og samtykke – og give unge viden, de kan bruge i deres hverdag."
-    theme="infomøde"
-    themeName="Infomøde"
-  />
-  <EventCardSingle
-    imagelink="/img/Workshop.webp"
-    imagetext="Event billede 1"
-    title="Strategi 2026 – åben workshop"
-    date="9. maj 2026"
-    location="Nordvesthallen"
-    informationtext="Deltag i en åben workshop, hvor vi sammen udvikler årets kampagnefokus og strategiske indsatser. Alle er velkomne – ingen forberedelse påkrævet."
-    theme="infomøde"
-    themeName="Infomøde"
-  />
-  <EventCardSingle
-    imagelink="/img/RouteTalk.webp"
-    imagetext="Event billede 1"
-    title="Rettigheder på Ruten"
-    date="6. september 2026"
-    location="Frederiksberg og omegn"
-    informationtext="Vi ruller vores mobile oplysningsstand ud i bydelen og deler viden om rettigheder, adgang til hjælp og muligheder for at engagere sig – kom forbi til en snak og materialer."
-    theme="oplysningskampagne"
-    themeName="Oplysningskampagne"
-  />
 </section>

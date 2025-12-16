@@ -3,10 +3,58 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
+import EventCardSlider from "../components/EventCardSlider.astro";
 ---
 
 <MainLayout title="Abortkampen.dk - Single View">
-  <main class="container mx-auto p-4">
-    <Heading htmlheading="h1">Lav noget flot!</Heading>
+  <main>
+    <!-- -------------- Singleview hero start ---------- -->
+    <section class="lg:grid grid-cols-2 my-[var(--margin-v-sektioner-large)]">
+      <img class="h-full mb-[var(--spacing-horizontal-xl)] lg:mb-0" src="/img/MyBodyMyChoice2026.webp" alt="Billede af demonstration" />
+      <div class="border-b border-accent pl-[var(--spacing-horizontal-xl)]">
+        <Text teksttype="body" , stylingclasses="" , weight="bold" , color="label">DEMONSTRATION</Text>
+        <Heading htmlheading="h2" , size="medium" , weight="heavy" , stylingclasses="mb-[var(--spacing-vertical-l)]" , color="body">MY BODY MY CHOICE 2026</Heading>
+        <Text teksttype="body" , stylingclasses="mb-[var(--spacing-vertical-m)]" , weight="regular" , color="body"
+          >Efter den store succes med sidste års markering vender vi stærkere tilbage i år. Tusindvis af mennesker deltog i 2024 for at vise, at retten til egen krop er noget, vi står sammen om — og i
+          år gentager vi succesen med endnu flere stemmer, flere aktivister og endnu større synlighed.</Text
+        >
+        <Text teksttype="body" , stylingclasses="mb-[var(--spacing-vertical-m)]" , weight="bold" , color="body">Information</Text>
+        <Text teksttype="body" , stylingclasses="mb-[var(--spacing-vertical-m)]" , weight="regular" , color="body">📍 <strong>Sted:</strong> Rådhuspladsen, København</Text>
+        <Text teksttype="body" , stylingclasses="mb-[var(--spacing-vertical-m)]" , weight="regular" , color="body">🗓️ <strong>Dato:</strong> 14. juni 2026</Text>
+        <Text teksttype="body" , stylingclasses="mb-[var(--spacing-vertical-m)]" , weight="regular" , color="body">⌛️ <strong>Tid:</strong> 14:00 - 17:00</Text>
+        <Text teksttype="body" , stylingclasses="mb-[var(--spacing-vertical-m)]" , weight="regular" , color="body"
+          ><strong>Arrangør:</strong> Sex & Samfund, i samarbejde med AktivistNetværket og KvindeKampen 2026</Text
+        >
+        <Text teksttype="body" , stylingclasses="mb-[var(--spacing-vertical-m)]" , weight="regular" , color="body"><strong>Sprog:</strong> Dansk (med enkelte indslag på engelsk)</Text>
+        <Text teksttype="body" , stylingclasses="mb-[var(--spacing-vertical-m)]" , weight="regular" , color="body"
+          ><strong>Tilmeld:</strong> Gratis - men vi anbefaler tilmelding, så vi kan sende opdateringer og få et overblik over, hvor mange der deltager.</Text
+        >
+        <div class="text-center my-[var(--spacing-vertical-2xl)]">
+          <Button variant="secondary" , size="medium">Tilmeld</Button>
+        </div>
+      </div>
+    </section>
+    <!-- -------------- About event start ---------- -->
+    <section class="mx-[var(--margin-h-sektioner-small)] md:mx-[var(--margin-h-sektioner-xlarge)] lg:mx-[300px]">
+      <Heading htmlheading="h2" , size="medium" , weight="heavy" , stylingclasses="mb-[var(--spacing-vertical-l)]" , color="body">OM EVENTET</Heading>
+      <Text teksttype="body" , stylingclasses="mb-[var(--spacing-vertical-xl)]" , weight="regular" , color="body"
+        >Retten til sikker abort er under pres i store dele af verden, og selv i Europa bevæger udviklingen sig i begge retninger. Nye lovforslag, politiske skift og begrænsninger i sundhedssystemer
+        betyder, at vi stadig ikke kan tage reproduktive rettigheder for givet. Derfor samler denne demonstration aktivister, unge, politikere, fagpersoner og organisationer på tværs af landet for at
+        markere, at retten til egen krop er en grundlæggende menneskeret, der skal forsvares aktivt og synligt.</Text
+      >
+      <Text teksttype="body" , stylingclasses="mb-[var(--spacing-vertical-xl)]" , weight="regular" , color="body"
+        >Dagen byder på inspirerende taler, musikalske indslag, personlige fortællinger og kreative fællesaktioner, der sætter fokus på både de globale udfordringer og de lokale perspektiver. Her får
+        du mulighed for at engagere dig, møde andre med samme værdier og være en del af et fællesskab, der står sammen for fremtidens rettigheder.</Text
+      >
+      <Text teksttype="body" , stylingclasses="mb-[var(--spacing-vertical-xl)]" , weight="regular" , color="body"
+        >Vi skaber et rum, hvor alle — uanset erfaring, baggrund eller alder — kan bidrage. Om du kommer for at lytte, lære, råbe, diskutere eller bare være til stede, er du med til at sende et
+        tydeligt signal: Retten over egen krop skal ikke rulles tilbage. Den skal styrkes.</Text
+      >
+    </section>
+    <!-- ----------- Event slider start ----------- -->
+    <section class="bg-base-200 p-[var(--spacing-horizontal-m)] my-[var(--margin-v-sektioner-small)] lg:my-[var(--margin-v-sektioner-large)]">
+      <Heading htmlheading="h2" , size="medium" , weight="heavy" , stylingclasses="mb-[var(--spacing-vertical-l)]" , color="body">FREMTIDIGE EVENTS</Heading>
+      <EventCardSlider />
+    </section>
   </main>
 </MainLayout>

@@ -2,32 +2,20 @@
 import { p } from "motion/react-client";
 
 // Henter parametrene fra Astro.props
-const {
-  href = "#",
-  target = "_self",
-  variant = "textlink",
-  size = "small",
-  color = "negative",
-  weight = "",
-  buttoncolor = "",
-} = Astro.props;
+const { href = "#", target = "_self", variant = "textlink", size = "small", color = "negative", weight = "", buttoncolor = "", isActive = false } = Astro.props;
 
 //Definer den styling (Tailwind classes, der gør sig gældende for alle links
 const linkStyling = "";
 
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige varianter
 const variantClasses = {
-  textlink:
-    "underline text-base-content font-bold hover:text-secondary transition-colors duration-300 ",
+  textlink: "underline text-base-content font-bold hover:text-secondary transition-colors duration-300 ",
 
-  footerlink:
-    "flex items-center gap-2 hover:text-secondary transition-colors duration-300",
+  footerlink: "flex items-center gap-2 hover:text-secondary transition-colors duration-300",
 
-  linkbutton:
-    "btn font-bold hover:text-base-content transition-all duration-300 btn-sm md:btn-md lg:btn-lg xl:btn-xl ",
+  linkbutton: "btn font-bold hover:text-base-content transition-all duration-300 btn-sm md:btn-md lg:btn-lg xl:btn-xl ",
 
-  headerlink:
-    "text-base-content font-bold hover:text-secondary transition-colors duration-300 ",
+  headerlink: "font-bold hover:text-secondary transition-colors duration-300",
 };
 
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskelligeog størrelser.
@@ -43,28 +31,21 @@ const colorClasses = {
 };
 
 const LinkButtonColorClasses = {
-  primary:
-    "btn btn-primary btn-sm text-base-content md:btn-md lg:btn-lg xl:btn-xl hover:text-neutral-content hover:bg-base-content hover:border-base-content ",
-  secondary:
-    "btn btn-secondary border-1 bg-base-100 text-secondary btn-secondary btn-outline btn-sm md:btn-md lg:btn-lg xl:btn-xl hover:text-base-content hover:bg-base-100 ",
+  primary: "btn btn-primary btn-sm text-base-content md:btn-md lg:btn-lg xl:btn-xl hover:text-neutral-content hover:bg-base-content hover:border-base-content ",
+  secondary: "btn btn-secondary border-1 bg-base-100 text-secondary btn-secondary btn-outline btn-sm md:btn-md lg:btn-lg xl:btn-xl hover:text-base-content hover:bg-base-100 ",
 };
 
 const weightClasses = {
   regular: "font-normal",
   bold: "font-bold",
 };
+
+const activeStateClasses = {
+  headerlink: isActive ? "text-secondary !font-bold" : "text-base-content",
+};
 ---
 
 <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
-<a
-  href={href}
-  target={target}
-  class:list={[
-    linkStyling,
-    variantClasses[variant],
-    sizeClasses[size],
-    colorClasses[color],
-    weightClasses[weight],
-    LinkButtonColorClasses[buttoncolor],
-  ]}><slot /></a
+<a href={href} target={target} class:list={[linkStyling, variantClasses[variant], sizeClasses[size], variant === "headerlink" ? activeStateClasses[variant] : colorClasses[color], weightClasses[weight], LinkButtonColorClasses[buttoncolor]]}
+  ><slot /></a
 >

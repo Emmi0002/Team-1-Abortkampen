@@ -9,9 +9,9 @@ import Merchcardslider from "../components/merchcardslider.astro";
 
 <MainLayout title="Abortkampen.dk - Støt os">
   <main>
-    <section class="relative w-full">
-      <img src="/img/HeroStot.webp" alt="lyserød trekant med skilt" class="w-300 h-auto object-cover" />
-      <div class="absolute top-0 left-0 p-4">
+    <section class="relative w-full bg-base-100 max-[1300px]:bg-secondary max-[1300px]:min-h-[500px]">
+      <img src="/img/HeroStot.webp" alt="lyserød trekant med skilt" class="w-350 h-auto object-cover min-[1299px]:block max-[1300px]:hidden" />
+      <div class="absolute top-40 left-0 p-4">
         <div class="flex items-center gap-4">
           <Heading htmlheading="h1" size="large" weight="heavy" color="negative">
             Støt i dag og gør<br />en forskel
@@ -23,7 +23,7 @@ import Merchcardslider from "../components/merchcardslider.astro";
     <!-- ---- Flex container for formular og hvad din støtte gør muligt på desktop ---- -->
     <div class="flex flex-col lg:flex-row lg:justify-between lg:items-start md:p-[var(--padding-xlarge)] p-[var(--padding-small)]">
       <!-- Container for formular øverst -->
-      <section class="md:w-auto w-full lg:-mt-130 relative z-10 order-1 lg:order-2 md:p-[var(--padding-xlarge)] p-[var(--padding-small)]">
+      <section class="md:mx-auto min-[1300px]:-mt-160 max-[1300px]:-mt-60 max-[1230px]:-mt-40 relative z-10 order-1 lg:order-2 p-[var(--padding-small)]">
         <!-- lang støt formular -->
         <div class="border-secondary border-[3px] rounded-xl w-full md:w-[550px] md:px-[var(--padding-xlarge)] px-[var(--padding-small)] bg-base-100 shadow-lg">
           <Text teksttype="caption" weight="heavyavenir" color="body" stylingclasses="text-center pt-[var(--padding-large)]">STØT NU</Text>
@@ -82,22 +82,22 @@ import Merchcardslider from "../components/merchcardslider.astro";
       </section>
 
       <!-- ---------------- hvad din støtte gør muligt ---------------- -->
-      <section class="w-full md:w-auto mt-8 lg:mt-16 md:-mt-70 order-2 md:order-1">
+      <section class="w-full md:w-auto mt-8 lg:mt-16 order-2 md:order-1">
         <Heading htmlheading="h4" size="xsmall" weight="bold" color="body">Hvad din støtte gør muligt</Heading>
-        <div class="flex items-center gap-4 mt-4 md:text-center">
+        <div class="flex items-center gap-4 mt-4">
           <!-- Lille vertikal streg i primary color med rundede ender -->
           <div class="w-4 h-12 bg-primary rounded-full mt-4"></div>
           <Text teksttype="headline" weight="bold" color="body">Sikre abori Uganda, Kenya, Etiopien, Marokko og Tunesien</Text>
         </div>
-        <div class="flex items-center gap-4 mt-4 md:text-center">
+        <div class="flex items-center gap-4 mt-4">
           <!-- Lille vertikal streg i primary color med rundede ender -->
           <div class="w-4 h-12 bg-primary rounded-full mt-4"></div>
           <Text teksttype="headline" weight="bold" color="body">Oplysning og rådgivning om rettigheder og sundhed</Text>
-        </div><div class="flex items-center gap-4 mt-4 md:text-center">
+        </div><div class="flex items-center gap-4 mt-4">
           <!-- Lille vertikal streg i primary color med rundede ender -->
           <div class="w-4 h-12 bg-primary rounded-full mt-4"></div>
           <Text teksttype="headline" weight="bold" color="body">Politisk pres for at ændre stramme abortlove</Text>
-        </div><div class="flex items-center gap-4 mt-4 md:text-center">
+        </div><div class="flex items-center gap-4 mt-4">
           <!-- Lille vertikal streg i primary color med rundede ender -->
           <div class="w-4 h-12 bg-primary rounded-full mt-4"></div>
           <Text teksttype="headline" weight="bold" color="body">Seksualundervisning og adgang til prævention</Text>
@@ -121,9 +121,11 @@ import Merchcardslider from "../components/merchcardslider.astro";
     </section>
 
     <!-- ---------------- kvinder dør sektion ---------------- -->
-    <section class="bg-base-200 mt-8 p-8 md:mx-60 mx-5 relative lg:mb-[var(--margin-v-sektioner-large)] mb-[var(--margin-v-sektioner-small)]">
+    <section
+      class="bg-base-200 mt-[var(--spacing-vertical-2xl)] py-[var(--spacing-horizontal-xl)] lg:mx-[var(--margin-h-sektioner-xlarge)] md:mx-[var(--margin-h-sektioner-medium)] relative lg:mb-[var(--margin-v-sektioner-large)] mb-[var(--margin-v-sektioner-small)]"
+    >
       <!-- vertikal streg i secondary color med rundede ender - flyttet til venstre -->
-      <div class="lg:w-6 w-4 h-80 bg-secondary rounded-full mt-4 absolute -left-2 top-1/2 transform -translate-y-1/2"></div>
+      <div class="lg:w-6 w-4 h-80 bg-secondary rounded-full absolute -left-2 top-1/2 transform -translate-y-1/2"></div>
 
       <div class="text-center">
         <Heading htmlheading="h2" size="medium" weight="heavy" color="body">23.000 kvinder <span class="text-secondary">dør</span> hvert år</Heading>
@@ -131,7 +133,7 @@ import Merchcardslider from "../components/merchcardslider.astro";
 
       <div class="grid lg:grid-cols-2 lg:px-20 mt-8 items-center">
         <img src="/img/Illustrations/tools.webp" alt="tegninger af værktøjer til farlige aborter" class="h-60 mx-auto" />
-        <Text teksttype="body" weight="regular" color="body"
+        <Text teksttype="body" weight="regular" color="body" stylingclasses="px-[var(--spacing-horizontal-xl)]"
           >Vi er ikke i mål med kampen endnu, og hvert år dør 23.000 kvinder i forsøget på at få en abort. De har ikke adgang til faciliterede steder, så derfor bruger de farlige metoder, i forsøget
           på at vide deres egen krop tilbage. Ved at støtte vores kamp, giver du kvinderne mulighed for at få foretaget sikre aborter, så vi sammen kan mindske det tal, der lige nu er alt for højt
         </Text>
@@ -173,7 +175,7 @@ import Merchcardslider from "../components/merchcardslider.astro";
         demonstrationer, infomøder og oplysningskampagner bliver du en del af den bevægelse, der kæmper for, at alle skal have ret til at bestemme over egen krop. <br /><br /> Bliv en del af fællesskabet
         og tilmeld dig vores fremtidige events</Text
       >
-      <Link variant="linkbutton" size="medium" href="/engagerdig">Se fremtidige events </Link>
+      <Link variant="linkbutton" size="medium" href="/engagerdig" buttoncolor="secondary" color="body">Se fremtidige events </Link>
     </section>
     <!-- ---------------- merch sektion ---------------- -->
     <section>

@@ -79,26 +79,51 @@
   default: false;
   prefersdark: false;
   color-scheme: "abortkampen";
+  /* Hvid farve */
   --color-base-100: oklch(100% 0 0);
+
+  /* Lyse grå */
   --color-base-200: oklch(98% 0 0);
+
+  /* Mørke grå */
   --color-base-300: oklch(95% 0 0);
+
+  /* Sort farve */
   --color-base-content: oklch(21% 0.006 285.885);
+
+  /* Gul farve + sort skrift */
   --color-primary: #ffde02;
   --color-primary-content: #241e21;
+
+  /* Pink farve + hvid skrift */
   --color-secondary: #f73288;
   --color-secondary-content: #fcfcfc;
+
+  /* Lyserød farve + mørk skrift */
   --color-accent: #ffcfe7;
   --color-accent-content: oklch(38% 0.063 188.416);
+
+  /* Sort farve + hvid skrift */
   --color-neutral: #241e21;
   --color-neutral-content: #fcfcfc;
+
+  /* Lysegul farve + mørk skrift */
   --color-info: oklch(94% 0.129 101.54);
   --color-info-content: oklch(29% 0.066 243.157);
+
+  /* Grøn farve + mørk skrift */
   --color-success: oklch(76% 0.136 163.223);
   --color-success-content: oklch(37% 0.077 168.94);
+
+  /* Orange farve + mørk skrift */
   --color-warning: #ffb63a;
   --color-warning-content: oklch(41% 0.112 45.904);
+
+  /* Rød farve + mørk skrift */
   --color-error: oklch(71% 0.194 13.428);
   --color-error-content: oklch(27% 0.105 12.094);
+
+  /* Tal variabler */
   --radius-selector: 0.5rem;
   --radius-field: 0.5rem;
   --radius-box: 0.5rem;

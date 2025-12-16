@@ -1,0 +1,19 @@
+---
+const { imgSrc, alt = "" } = Astro.props;
+---
+
+<article class="flex justify-center">
+  <div
+    class="flex items-center gap-[var(--spacing-vertical-l)] max-w-xs md:max-w-md"
+  >
+    <!-- Image -->
+    <div class="flex justify-center">
+      <img class="w-35 sm:40 md:w-50" src={imgSrc} alt={alt} />
+    </div>
+
+    <!-- Content -->
+    <div class="space-y-2 md:space-y-4">
+      <slot />
+    </div>
+  </div>
+</article>

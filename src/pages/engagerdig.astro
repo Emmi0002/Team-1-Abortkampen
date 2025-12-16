@@ -5,10 +5,11 @@ import InformationBox from "../components/InformationBox.astro";
 import Text from "../components/Text.astro";
 import EventCards from "../components/EventCards.astro";
 import Link from "../components/Link.astro";
+import FormLittleLong from "../components/FormLittleLong.astro";
 ---
 
 <MainLayout title="Abortkampen.dk - Engager dig">
-  <main class="">
+  <main>
     <!-- ---------- Information bos start ----------- -->
     <InformationBox
       title="Nyt i abortkampen"
@@ -50,7 +51,7 @@ import Link from "../components/Link.astro";
         informationtext="Deltag i vores infomøde for at lære mere om aktuelle abortrettigheder og hvordan du kan engagere dig."
       />
     </section>
-    <!-- ------------ Sidst engagerede vi os for start--------- -->
+    <!-- ------------ Sidst engagerede vi os for start --------- -->
     <section
       class="md:grid grid-cols-2 gap-[var(--spacing-horizontal-xl)] mx-[var(--margin-h-sektioner-small)] lg:mx-[var(--margin-h-sektioner-large)] my-[var(--margin-v-sektioner-small)] lg:my-[var(--margin-v-sektioner-large)]"
     >
@@ -69,5 +70,7 @@ import Link from "../components/Link.astro";
       </div>
       <img src="/img/Demonstration.webp" alt="Billede af en demonstration" />
     </section>
+    <!-- ------------ Lille støtte box start --------- -->
+    <FormLittleLong />
   </main>
 </MainLayout>

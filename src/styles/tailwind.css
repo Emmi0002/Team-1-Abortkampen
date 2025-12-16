@@ -25,24 +25,29 @@
 :root {
   /* spacing */
   --spacing-horizontal-xs: 8px;
-  --spacing-vertical-xs: 4px;
   --spacing-horizontal: 16px;
-  --spacing-vertical: 8px;
   --spacing-horizontal-m: 20px;
-  --spacing-vertical-m: 12px;
   --spacing-horizontal-l: 24px;
   --spacing-horizontal-xl: 32px;
   --spacing-horizontal-2xl: 48px;
+  --spacing-vertical-xs: 4px;
+  --spacing-vertical: 8px;
+  --spacing-vertical-m: 12px;
   --spacing-vertical-l: 16px;
+  --spacing-vertical-xl: 24px;
+  --spacing-vertical-2xl: 32px;
   --spacing-large: 24px;
   --spacing-component-token: 12px;
+
+  --margin-v-sektioner-small: 50px;
+  --margin-v-sektioner-large: 70px;
   --margin-v-sektioner-xsmall: 50px;
   --margin-v-sektioner-small: 90px;
   --margin-v-sektioner-large: 100px;
   --margin-h-sektioner-small: 20px;
   --margin-h-sektioner-medium: 70px;
   --margin-h-sektioner-large: 50px;
-  --margin-h-sektioner-xlarge: 250px;
+  --margin-h-sektioner-xlarge: 200px;
   --gap-h-large: 60px;
 
   /* radius */

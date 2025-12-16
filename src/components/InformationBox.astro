@@ -5,9 +5,11 @@ import Text from "./Text.astro";
 const { title = "", subtitle = "", text1 = "", text2 = "", text3 = "", imagelink = "", imagetext = "", color = "body" } = Astro.props;
 ---
 
-<section class="relative bg-base-200 p-[var(--spacing-horizontal-2xl)] mx-[var(--margin-h-sektioner-small)] md:mx-[var(--margin-h-sektioner-large)] items-center">
-  <div class="absolute -left-3 top-1/4 w-6 h-1/3 md:h-1/2 bg-secondary rounded-full"></div>
-  <div class="min-[950px]:grid grid-cols-[2fr_1fr] gap-4 items-center">
+<section
+  class="relative bg-base-200 p-[var(--spacing-horizontal-2xl)] items-center my-[var(--margin-v-sektioner-small)] lg:my-[var(--margin-v-sektioner-large)] max-[1150px]:mx-[var(--margin-h-sektioner-small)] lg:mx-[var(--margin-h-sektioner-xlarge)]"
+>
+  <div class="absolute -left-2 lg:-left-3 top-1/4 w-4 lg:w-6 h-1/3 md:h-1/2 bg-secondary rounded-full"></div>
+  <div class="min-[950px]:flex flex-row gap-4 items-center">
     <div class="">
       <Heading htmlheading="h2" , size="medium" , weight="heavy" , stylingclasses="mb-[var(--spacing-vertical-l)]" , color="label">{title}</Heading>
       <Text teksttype="headline" , stylingclasses="mb-[var(--spacing-vertical-l)]" , weight="bold" , color={color} ,>{subtitle}</Text>

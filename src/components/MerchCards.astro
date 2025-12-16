@@ -1,0 +1,20 @@
+---
+import Button from "./Button.astro";
+import Text from "./Text.astro";
+
+// Henter parametrene fra Astro.props
+const { imageSrc = "", imageAlt = "", title = "Card Title", pris = "", buttonText = "Buy Now", buttonVariant = "primary" } = Astro.props;
+---
+
+<div class="card w-96 rounded-none">
+  <figure>
+    <img src={imageSrc} alt={imageAlt} class="h-100 w-full object-cover rounded-none" />
+  </figure>
+  <div class="flex flex-row justify-between items-center p-4">
+    <Text teksttype="Headline" weight="bold">{title}</Text>
+    <Text teksttype="body" weight="regular">{pris}</Text>
+  </div>
+  <div class="card-actions justify-end">
+    <Button variant={buttonVariant}>{buttonText}</Button>
+  </div>
+</div>

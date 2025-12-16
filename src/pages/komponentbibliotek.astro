@@ -6,6 +6,12 @@ import Link from "../components/Link.astro";
 import Button from "../components/Button.astro";
 import LogoInformationBox from "../components/LogoInformationBox.astro";
 import Quote from "../components/Quote.astro";
+import InformationBox from "../components/InformationBox.astro";
+import FormLittleLong from "../components/FormLittleLong.astro";
+import EventCardSlider from "../components/EventCardSlider.astro";
+import EventCardSingle from "../components/EventCardSingle.astro";
+import MerchCards from "../components/MerchCards.astro";
+import Merchcardslider from "../components/merchcardslider.astro";
 ---
 
 <MainLayout title="Abortkampen.dk - Komponentbibliotek">
@@ -249,7 +255,7 @@ import Quote from "../components/Quote.astro";
 
       <!-- Textlink -->
       <div class="my-10">
-        <Heading htmlheading="h3" size="small" weight="bold">Textlink</Heading>
+        <Heading htmlheading="h3" size="small" weight="heavy">Textlink</Heading>
         <Text teksttype="body">
           Et textlink bruges som del af en tekst, fx:
           <Link href="#" color="body">Klik her for mere information</Link> i denne
@@ -259,7 +265,7 @@ import Quote from "../components/Quote.astro";
 
       <!-- Footerlink -->
       <div class="my-10 bg-primary-content p-4 rounded">
-        <Heading htmlheading="h3" size="small" weight="bold" color="negative"
+        <Heading htmlheading="h3" size="small" weight="heavy" color="negative"
           >Footerlink</Heading
         >
         <div class="flex gap-6 mt-2">
@@ -271,7 +277,8 @@ import Quote from "../components/Quote.astro";
 
       <!-- Link-knap -->
       <div class="my-10">
-        <Heading htmlheading="h3" size="small" weight="bold">Link Knap</Heading>
+        <Heading htmlheading="h3" size="small" weight="heavy">Link Knap</Heading
+        >
         <Text teksttype="body" stylingclasses="mb-4">
           En link-knap kan bruges som call-to-action:
         </Text>
@@ -311,7 +318,32 @@ import Quote from "../components/Quote.astro";
         <div class="mb-6">
           <Heading htmlheading="h2" size="medium">EventCards</Heading>
         </div>
+        <div class="mb-10 mt-10">
+          <Heading htmlheading="h3" size="small" weight="heavy"
+            >Event Card</Heading
+          >
+        </div>
+
+        <div class="max-w-sm">
+          <EventCardSingle
+            imagelink="/img/infomeeting.webp"
+            imagetext="Event billede 1"
+            title="Bliv oplyst om kampen"
+            date="15. januar 2026"
+            location="København S"
+            informationtext="Kom til vores infomøde og bliv klogere på kampen for retten til egen krop og hvordan du selv kan engagere dig."
+            theme="infomøde"
+            themeName="Infomøde"
+          />
+        </div>
+        <div class="mb-10 mt-10">
+          <Heading htmlheading="h3" size="small" weight="heavy"
+            >Event slider</Heading
+          >
+        </div>
+        <EventCardSlider />
       </section>
+
       <!-- Slut på EventCards -->
 
       <hr class="my-15" />
@@ -321,6 +353,26 @@ import Quote from "../components/Quote.astro";
         <div class="mb-6">
           <Heading htmlheading="h2" size="medium">MerchCards</Heading>
         </div>
+        <div class="mb-10 mt-10">
+          <Heading htmlheading="h3" size="small" weight="heavy"
+            >Merch Card</Heading
+          >
+        </div>
+
+        <MerchCards
+          imageSrc="/img/Merch/PosterAbortion.webp"
+          imageAlt="Abortkampen merchandise plakat"
+          title="Fri abort 2025 - Plakat"
+          pris="249,00 kr."
+          buttonText="Læg i kurv"
+          buttonVariant="secondary"
+        />
+        <div class="mb-10 mt-10">
+          <Heading htmlheading="h3" size="small" weight="heavy"
+            >Merch slider</Heading
+          >
+        </div>
+        <Merchcardslider />
       </section>
       <!-- Slut på MerchCards -->
 
@@ -331,6 +383,7 @@ import Quote from "../components/Quote.astro";
         <div class="mb-6">
           <Heading htmlheading="h2" size="medium">Form</Heading>
         </div>
+        <FormLittleLong />
       </section>
       <!-- Slut på Form Little Long -->
 
@@ -341,6 +394,26 @@ import Quote from "../components/Quote.astro";
         <div class="mb-6">
           <Heading htmlheading="h2" size="medium">Informations box</Heading>
         </div>
+        <InformationBox
+          title="Kampen for fri abort slutter aldrig"
+          subtitle="Din indsats gør en reel forskel!"
+          text1="Hos Abortkampen.dk giver vi dig mulighed for at engagere dig aktivt i kampen for fri abort. Du kan gøre en forskel gennem deltagelse i demonstrationer, uddeling af informationsmateriale, oplysningskampagner og andre konkrete aktiviteter, der støtter vores sag."
+          text2="Vi arrangerer løbende forskellige events og initiativer, hvor du kan være med – fra gadeaktioner og opslag til informative møder og sociale events med fokus på aktiv deltagelse. Uanset om du har lidt eller meget tid, er der mange måder at bidrage på."
+          text3="Tjek vores kommende aktiviteter, og find ud af, hvordan du kan tage del i kampen for rettigheder og forandring."
+          linktext="Engager dig"
+          href="/engagerdig"
+        >
+          <div slot="media" class="mx-auto">
+            <script
+              src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js"
+              type="module"></script>
+            <dotlottie-wc
+              src="https://lottie.host/8bce6f22-cd07-4dbf-8bde-5ebcb4210ff1/0hkPtSaS5K.lottie"
+              class="w-full max-w-full h-auto"
+              autoplay
+              loop></dotlottie-wc>
+          </div>
+        </InformationBox>
       </section>
       <!-- Slut på Informations box -->
 

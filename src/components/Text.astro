@@ -1,5 +1,6 @@
 ---
 // Henter parametrene fra Astro.props
+
 const {
   teksttype = "",
   stylingclasses = "",
@@ -31,13 +32,6 @@ const colorClasses = {
 };
 ---
 
-<p
-  class:list={[
-    sizeClasses[teksttype],
-    typeClasses[weight],
-    colorClasses[color],
-    stylingclasses,
-  ]}
->
+<p class:list={[sizeClasses[teksttype], typeClasses[weight], colorClasses[color], stylingclasses]}>
   <slot />
 </p>

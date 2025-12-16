@@ -1,4 +1,6 @@
 ---
+import { p } from "motion/react-client";
+
 // Henter parametrene fra Astro.props
 const {
   href = "#",
@@ -7,6 +9,7 @@ const {
   size = "small",
   color = "negative",
   weight = "",
+  buttoncolor = "",
 } = Astro.props;
 
 //Definer den styling (Tailwind classes, der gør sig gældende for alle links
@@ -21,7 +24,10 @@ const variantClasses = {
     "flex items-center gap-2 hover:text-secondary transition-colors duration-300",
 
   linkbutton:
-    "btn btn-secondary btn-outline btn border-1 border-secondary bg-base-100 text-secondary font-bold hover:text-base-content transition-all duration-300 btn-sm md:btn-md lg:btn-lg xl:btn-xl ",
+    "btn font-bold hover:text-base-content transition-all duration-300 btn-sm md:btn-md lg:btn-lg xl:btn-xl ",
+
+  headerlink:
+    "text-base-content font-bold hover:text-secondary transition-colors duration-300 ",
 };
 
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskelligeog størrelser.
@@ -34,6 +40,13 @@ const sizeClasses = {
 const colorClasses = {
   negative: "text-neutral-content",
   body: "text-base-content",
+};
+
+const LinkButtonColorClasses = {
+  primary:
+    "btn btn-primary btn-sm text-base-content md:btn-md lg:btn-lg xl:btn-xl hover:text-neutral-content hover:bg-base-content hover:border-base-content ",
+  secondary:
+    "btn btn-secondary border-1 bg-base-100 text-secondary btn-secondary btn-outline btn-sm md:btn-md lg:btn-lg xl:btn-xl hover:text-base-content hover:bg-base-100 ",
 };
 
 const weightClasses = {
@@ -52,5 +65,6 @@ const weightClasses = {
     sizeClasses[size],
     colorClasses[color],
     weightClasses[weight],
+    LinkButtonColorClasses[buttoncolor],
   ]}><slot /></a
 >

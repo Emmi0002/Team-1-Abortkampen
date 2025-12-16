@@ -275,102 +275,108 @@ import Quote from "../components/Quote.astro";
         <Text teksttype="body" stylingclasses="mb-4">
           En link-knap kan bruges som call-to-action:
         </Text>
-        <Link href="#" variant="linkbutton">Læs mere</Link>
+        <Link href="#" variant="linkbutton" buttoncolor="secondary"
+          >Color Secondary</Link
+        >
+        <Link href="#" variant="linkbutton" buttoncolor="primary" color="body"
+          >Color Primary</Link
+        >
       </div>
-    </section>
-    <!-- Slut på Link komponent instanser -->
+      <!-- Slut på Link komponent instanser -->
 
-    <hr class="my-15" />
-    <!-- Buttons komponent instanser -->
-    <section class="my-15">
-      <div class="mb-6">
-        <Heading htmlheading="h2" size="medium">Knapper</Heading>
-      </div>
-      <div>
+      <hr class="my-15" />
+      <!-- Buttons komponent instanser -->
+      <section class="my-15">
         <div class="mb-6">
-          <Button>Primary knap</Button>
-          <Button variant="secondary">Secondary knap</Button>
+          <Heading htmlheading="h2" size="medium">Knapper</Heading>
         </div>
-
         <div>
-          <Button size="wide">Primary bred knap</Button>
-          <Button variant="secondary" size="wide">Secondary bred knap</Button>
+          <div class="mb-6">
+            <Button>Primary knap</Button>
+            <Button variant="secondary">Secondary knap</Button>
+          </div>
+
+          <div>
+            <Button size="wide">Primary bred knap</Button>
+            <Button variant="secondary" size="wide">Secondary bred knap</Button>
+          </div>
         </div>
-      </div>
+      </section>
+      <!-- Slut på Buttons komponent instanser -->
+
+      <hr class="my-15" />
+
+      <!-- EventCards -->
+      <section class="my-15">
+        <div class="mb-6">
+          <Heading htmlheading="h2" size="medium">EventCards</Heading>
+        </div>
+      </section>
+      <!-- Slut på EventCards -->
+
+      <hr class="my-15" />
+
+      <!-- MerchCards -->
+      <section class="my-15">
+        <div class="mb-6">
+          <Heading htmlheading="h2" size="medium">MerchCards</Heading>
+        </div>
+      </section>
+      <!-- Slut på MerchCards -->
+
+      <hr class="my-15" />
+
+      <!-- Form  -->
+      <section class="my-15">
+        <div class="mb-6">
+          <Heading htmlheading="h2" size="medium">Form</Heading>
+        </div>
+      </section>
+      <!-- Slut på Form Little Long -->
+
+      <hr class="my-15" />
+
+      <!-- Informations box -->
+      <section class="my-15">
+        <div class="mb-6">
+          <Heading htmlheading="h2" size="medium">Informations box</Heading>
+        </div>
+      </section>
+      <!-- Slut på Informations box -->
+
+      <hr class="my-15" />
+
+      <!-- Informations box med logo -->
+      <section class="my-15">
+        <div class="mb-6">
+          <Heading htmlheading="h2" size="medium">Logo Informations box</Heading
+          >
+        </div>
+        <LogoInformationBox
+          title="Vi er Sex & Samfund"
+          text1="I mere end 60 år har vi kæmpet for retten til at bestemme over sin egen krop. Hvad der startede med en gruppe kvindelige lægers kamp for at forhindre uønskede graviditeter for kvinder i Danmark, er nu vokset til en kamp for alle menneskers seksuelle sundhed og rettigheder i og uden for Danmarks grænser. Og kampen er lige så vigtig, som den var dengang."
+          text2="Siden læge Agnete Bræstrup tog de første spadestik til organisationens grundlæggelse, har vi været medlem af verdens førende familieplanlægningsorganisation, International Planned Parenthood Federation (IPPF)."
+          text3="Med seksualoplysning og -undervisning som kerneområder arbejder vi for alle menneskers ret til at bestemme over egen krop, køn og seksualitet. Sex & Samfund er strategisk partner til Udenrigsministeriet og har projekter med lokale partnere i blandt andet Kenya og Uganda."
+        />
+      </section>
+      <!-- Slut på Informations box med logo -->
+
+      <hr class="my-15" />
+
+      <!-- Personlige historier quote box -->
+      <section class="my-15">
+        <div class="mb-6">
+          <Heading htmlheading="h2" size="medium"
+            >Quote box - Personlige historier
+          </Heading>
+        </div>
+        <Quote
+          title="Jeg havde handlet ud fra omsorg"
+          body="Jeg var 24, da jeg valgte abort. Efter indgrebet føltes stilheden tung, og jeg tvivlede på mig selv. Da min veninde kom forbi og bare sad hos mig, forsvandt noget af ensomheden. Beslutningen var stadig tung, men jeg begyndte at se, at jeg havde handlet ud fra omsorg; både for mig selv og det liv, jeg endnu ikke var klar til at tage ansvar for."
+          author="Caroline, 24 år"
+        />
+      </section>
+      <!-- slut på quote box - Personlige historier -->
     </section>
-    <!-- Slut på Buttons komponent instanser -->
-
-    <hr class="my-15" />
-
-    <!-- EventCards -->
-    <section class="my-15">
-      <div class="mb-6">
-        <Heading htmlheading="h2" size="medium">EventCards</Heading>
-      </div>
-    </section>
-    <!-- Slut på EventCards -->
-
-    <hr class="my-15" />
-
-    <!-- MerchCards -->
-    <section class="my-15">
-      <div class="mb-6">
-        <Heading htmlheading="h2" size="medium">MerchCards</Heading>
-      </div>
-    </section>
-    <!-- Slut på MerchCards -->
-
-    <hr class="my-15" />
-
-    <!-- Form  -->
-    <section class="my-15">
-      <div class="mb-6">
-        <Heading htmlheading="h2" size="medium">Form</Heading>
-      </div>
-    </section>
-    <!-- Slut på Form Little Long -->
-
-    <hr class="my-15" />
-
-    <!-- Informations box -->
-    <section class="my-15">
-      <div class="mb-6">
-        <Heading htmlheading="h2" size="medium">Informations box</Heading>
-      </div>
-    </section>
-    <!-- Slut på Informations box -->
-
-    <hr class="my-15" />
-
-    <!-- Informations box med logo -->
-    <section class="my-15">
-      <div class="mb-6">
-        <Heading htmlheading="h2" size="medium">Logo Informations box</Heading>
-      </div>
-      <LogoInformationBox
-        title="Vi er Sex & Samfund"
-        text1="I mere end 60 år har vi kæmpet for retten til at bestemme over sin egen krop. Hvad der startede med en gruppe kvindelige lægers kamp for at forhindre uønskede graviditeter for kvinder i Danmark, er nu vokset til en kamp for alle menneskers seksuelle sundhed og rettigheder i og uden for Danmarks grænser. Og kampen er lige så vigtig, som den var dengang."
-        text2="Siden læge Agnete Bræstrup tog de første spadestik til organisationens grundlæggelse, har vi været medlem af verdens førende familieplanlægningsorganisation, International Planned Parenthood Federation (IPPF)."
-        text3="Med seksualoplysning og -undervisning som kerneområder arbejder vi for alle menneskers ret til at bestemme over egen krop, køn og seksualitet. Sex & Samfund er strategisk partner til Udenrigsministeriet og har projekter med lokale partnere i blandt andet Kenya og Uganda."
-      />
-    </section>
-    <!-- Slut på Informations box med logo -->
-
-    <hr class="my-15" />
-
-    <!-- Personlige historier quote box -->
-    <section class="my-15">
-      <div class="mb-6">
-        <Heading htmlheading="h2" size="medium"
-          >Quote box - Personlige historier
-        </Heading>
-      </div>
-      <Quote
-        title="Jeg havde handlet ud fra omsorg"
-        body="Jeg var 24, da jeg valgte abort. Efter indgrebet føltes stilheden tung, og jeg tvivlede på mig selv. Da min veninde kom forbi og bare sad hos mig, forsvandt noget af ensomheden. Beslutningen var stadig tung, men jeg begyndte at se, at jeg havde handlet ud fra omsorg; både for mig selv og det liv, jeg endnu ikke var klar til at tage ansvar for."
-        author="Caroline, 24 år"
-      />
-    </section>
-    <!-- slut på quote box - Personlige historier -->
   </main>
 </MainLayout>

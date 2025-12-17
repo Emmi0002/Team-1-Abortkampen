@@ -25,7 +25,9 @@ import Merchcardslider from "../components/merchcardslider.astro";
       <!-- Container for formular øverst -->
       <section class="md:mx-auto min-[1300px]:-mt-160 max-[1300px]:-mt-60 max-[1230px]:-mt-40 relative z-10 order-1 lg:order-2 p-[var(--padding-small)]">
         <!-- lang støt formular -->
-        <div class="border-secondary border-[3px] rounded-xl w-full md:w-[550px] md:px-[var(--padding-xlarge)] px-[var(--padding-small)] bg-base-100 shadow-lg">
+        <div
+          class="border-secondary border-[3px] rounded-xl w-full md:w-[550px] md:px-[var(--padding-xlarge)] px-[var(--padding-small)] bg-base-100 shadow-lg intersect:animate-fade-left intersect:animate-duration-[1000ms] intersect:animate-delay-[500ms]"
+        >
           <Text teksttype="caption" weight="heavyavenir" color="body" stylingclasses="text-center pt-[var(--padding-large)]">STØT NU</Text>
           <Text teksttype="body" weight="regular" color="body" stylingclasses="text-center py-[var(--gap-v)]">Med din støtte giver du kvinder mulighed for at få foretaget en sikker abort</Text>
           <div class="md:px-[var(--padding-2xlarge)] px-[var(--padding-small)] md:py-[var(--padding-xlarge)] py-[var(--padding-small)]">
@@ -84,20 +86,22 @@ import Merchcardslider from "../components/merchcardslider.astro";
       <!-- ---------------- hvad din støtte gør muligt ---------------- -->
       <section class="w-full md:w-auto mt-8 lg:mt-16 order-2 md:order-1">
         <Heading htmlheading="h4" size="xsmall" weight="bold" color="body">Hvad din støtte gør muligt</Heading>
-        <div class="flex items-center gap-4 mt-4">
+        <div class="flex items-center gap-4 mt-4 intersect:animate-fade-right intersect:animate-duration-[1000ms] intersect:animate-delay-[200ms]">
           <!-- Lille vertikal streg i primary color med rundede ender -->
           <div class="w-4 h-12 bg-primary rounded-full mt-4"></div>
           <Text teksttype="headline" weight="bold" color="body">Sikre abori Uganda, Kenya, Etiopien, Marokko og Tunesien</Text>
         </div>
-        <div class="flex items-center gap-4 mt-4">
+        <div class="flex items-center gap-4 mt-4 intersect:animate-fade-right intersect:animate-duration-[1000ms] intersect:animate-delay-[600ms]">
           <!-- Lille vertikal streg i primary color med rundede ender -->
           <div class="w-4 h-12 bg-primary rounded-full mt-4"></div>
           <Text teksttype="headline" weight="bold" color="body">Oplysning og rådgivning om rettigheder og sundhed</Text>
-        </div><div class="flex items-center gap-4 mt-4">
+        </div>
+        <div class="flex items-center gap-4 mt-4 intersect:animate-fade-right intersect:animate-duration-[1000ms] intersect:animate-delay-[1000ms]">
           <!-- Lille vertikal streg i primary color med rundede ender -->
           <div class="w-4 h-12 bg-primary rounded-full mt-4"></div>
           <Text teksttype="headline" weight="bold" color="body">Politisk pres for at ændre stramme abortlove</Text>
-        </div><div class="flex items-center gap-4 mt-4">
+        </div>
+        <div class="flex items-center gap-4 mt-4 intersect:animate-fade-right intersect:animate-duration-[1000ms] intersect:animate-delay-[1400ms]">
           <!-- Lille vertikal streg i primary color med rundede ender -->
           <div class="w-4 h-12 bg-primary rounded-full mt-4"></div>
           <Text teksttype="headline" weight="bold" color="body">Seksualundervisning og adgang til prævention</Text>
@@ -144,7 +148,8 @@ import Merchcardslider from "../components/merchcardslider.astro";
 
     <section class="md:flex items-center justify-center px-20 mt-16 lg:gap-15 gap-4 lg:mb-[var(--margin-v-sektioner-large)] mb-[var(--margin-v-sektioner-small)]">
       <div class="text-center">
-        <Heading htmlheading="h4" size="medium" weight="bold" color="body">200</Heading>
+        <Heading htmlheading="h4" size="medium" weight="bold" color="body" stylingclasses="intersect:animate-fade-down intersect:animate-duration-[1000ms] intersect:animate-delay-[200ms]">200</Heading
+        >
         <Text teksttype="headline" weight="regular" color="body">Har allerede støttet i dag</Text>
       </div>
 
@@ -152,7 +157,9 @@ import Merchcardslider from "../components/merchcardslider.astro";
       <div class="w-3 lg:h-25 h-40 bg-secondary rounded-full md:rotate-0 rotate-90 mx-auto"></div>
 
       <div class="text-center">
-        <Heading htmlheading="h4" size="medium" weight="bold" color="body">1000</Heading>
+        <Heading htmlheading="h4" size="medium" weight="bold" color="body" stylingclasses="intersect:animate-fade-down intersect:animate-duration-[1000ms] intersect:animate-delay-[500ms]"
+          >1000</Heading
+        >
         <Text teksttype="headline" weight="regular" color="body">Har fået hjælp til sikker abort</Text>
       </div>
 
@@ -160,7 +167,8 @@ import Merchcardslider from "../components/merchcardslider.astro";
       <div class="w-3 lg:h-25 h-40 bg-secondary rounded-full md:rotate-0 rotate-90 mx-auto"></div>
 
       <div class="text-center">
-        <Heading htmlheading="h4" size="medium" weight="bold" color="body">150</Heading>
+        <Heading htmlheading="h4" size="medium" weight="bold" color="body" stylingclasses="intersect:animate-fade-down intersect:animate-duration-[1000ms] intersect:animate-delay-[800ms]">150</Heading
+        >
         <Text teksttype="headline" weight="regular" color="body">Har deltaget i events med os</Text>
       </div>
     </section>

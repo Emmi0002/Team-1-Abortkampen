@@ -23,6 +23,7 @@
     "@tailwindcss/typography": "^0.5.14",
     "@tailwindcss/vite": "^4.0.0",
     "daisyui": "^5.5.13",
+    "html-validate": "^10.5.0",
     "tailwindcss": "^4.0.0"
   }
 }

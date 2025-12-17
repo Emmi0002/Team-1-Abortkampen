@@ -8,17 +8,11 @@ const { title = "", text1 = "", text2 = "", text3 = "" } = Astro.props;
 <section
   class="flex flex-row items-start max-w-4xl mx-auto gap-[var(--spacing-vertical-m)] my-[var(--margin-v-sektioner-small)] px-[var(--margin-h-sektioner-small)] md:my-[var(--margin-v-sektioner-large)] md:px-[var(--margin-h-sektioner-large)]"
 >
-  <div class="flex justify-center lg:justify-start pt-2">
-    <img
-      class="max-w-20 sm:max-w-30 pt-2"
-      src="/img/Logo/LogoYellow.webp"
-      alt="Sex & Samfund logo"
-    />
+  <div class="flex justify-center lg:justify-start pt-2 intersect:animate-fade-down intersect:animate-duration-[1000ms] intersect:animate-delay-[500ms]">
+    <img class="max-w-20 sm:max-w-30 pt-2" src="/img/Logo/LogoYellow.webp" alt="Sex & Samfund logo" />
   </div>
   <div>
-    <Heading htmlheading="h2" size="medium" weight="heavy" color="body"
-      >{title}</Heading
-    >
+    <Heading htmlheading="h2" size="medium" weight="heavy" color="body">{title}</Heading>
     <div class="flex flex-col gap-6">
       <Text teksttype="body" weight="regular" color="body">
         {text1}

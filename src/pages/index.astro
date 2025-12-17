@@ -14,18 +14,28 @@ import FormLittleLong from "../components/FormLittleLong.astro";
 
 <MainLayout title="Abortkampen.dk - Forside">
   <main class="my-[var(--margin-v-sektioner-xsmall)] md:my-[var(--margin-v-sektioner-large)]">
-    <!-- hero -->
+    <!-- ------------- hero ----------- -->
     <section class="mb-[var(--margin-v-sektioner-large)]">
       <div class="bg-secondary">
         <img src="img/Illustrations/Signs.webp" alt="skilte tegning" class="h-80 md:h-120 lg:h-160 mx-auto pt-[var(--spacing-vertical-2xl)]" />
       </div>
       <div class="md:grid md:grid-cols-2 lg:grid-cols-3 mt-[var(--spacing-vertical-xl)] md:mx-[var(--spacing-horizontal-l)] md:gap-[var(--spacing-horizontal)]">
         <div class="lg:col-span-2">
-          <Heading htmlheading="h1" size="large" weight="heavy" color="body" stylingclasses="text-center md:text-start my-[var(--margin-v-sektioner-xsmall)]  "> kampen for fri abort er ikke slut </Heading>
-          <div class="lg:w-110 md:w-80 md:h-6 bg-secondary rounded-full mt-4"></div>
+          <Heading
+            htmlheading="h1"
+            size="large"
+            weight="heavy"
+            color="body"
+            stylingclasses="text-center md:text-start my-[var(--margin-v-sektioner-xsmall)] intersect:animate-fade-right intersect:animate-duration[10000ms] intersect:animate-delay-[500ms]"
+          >
+            kampen for fri abort er ikke slut
+          </Heading>
+          <div class="lg:w-110 md:w-80 md:h-6 bg-secondary rounded-full mt-4 intersect:animate-fade-right intersect:animate-duration[10000ms] intersect:animate-delay-[700ms]"></div>
         </div>
         <!-- lang støt formular -->
-        <div class="md:-mt-70 mb-[var(--spacing-vertical-xl)] p-[var(--padding-small)] lg:py-[var(--padding-2xlarge)] border-secondary border-[3px] rounded-xl lg:h-aut mx-auto w-[350px] md:w-full bg-base-100 z-20">
+        <div
+          class="md:-mt-70 mb-[var(--spacing-vertical-xl)] p-[var(--padding-small)] lg:py-[var(--padding-2xlarge)] border-secondary border-[3px] rounded-xl lg:h-aut mx-auto w-[350px] md:w-full bg-base-100 z-20"
+        >
           <div class="text-center">
             <Text teksttype="caption" weight="heavyavenir" color="body">STØT NU</Text>
             <Text teksttype="bocy" weight="regular" color="body" stylingclasses="mb-[var(--padding-2xlarge)]">Med din støtte giver du kvinder mulighed for at få foretaget en sikker abort</Text>
@@ -48,20 +58,24 @@ import FormLittleLong from "../components/FormLittleLong.astro";
       </div>
     </section>
 
-    <!-- Infostats sektion -->
-    <section class="flex flex-col gap-[var(--spacing-large)] md:flex-row md:justify-around
+    <!-- ------------ Infostats sektion ------------ -->
+    <section
+      class="flex flex-col gap-[var(--spacing-large)] md:flex-row md:justify-around
        max-w-6xl mx-auto
        px-[var(--margin-h-sektioner-small)]
-       md:px-[var(--margin-h-sektioner-large)]">
+       md:px-[var(--margin-h-sektioner-large)]"
+    >
       <Infostat imgSrc="/img/Illustrations/tools.webp" alt="Bøjle, sæbe, stikkepind og salt">
-        <Heading htmlheading="h2" size="medium" weight="heavy" color="label"> 23.000 </Heading>
+        <Heading htmlheading="h2" size="medium" weight="heavy" color="label" stylingclasses="intersect:animate-fade-up intersect:animate-duration-[1000ms] intersect:animate-delay-[500ms]">
+          23.000
+        </Heading>
         <Text teksttype="headline" weight="bold" color="body">
           Kvinder <span class="text-secondary">dør</span> hvert år pga. usikre abortmetoder
         </Text>
       </Infostat>
 
       <Infostat imgSrc="/img/Illustrations/women.webp" alt="Fem figur-ikoner, én udfyldt">
-        <Heading htmlheading="h2" size="medium" weight="heavy" color="body">
+        <Heading htmlheading="h2" size="medium" weight="heavy" color="body" stylingclasses="intersect:animate-fade-up intersect:animate-duration-[1000ms] intersect:animate-delay-[700ms]">
           1 <span class="text-secondary">UD AF 5</span>
         </Heading>
         <Text teksttype="headline" weight="bold" color="body">
@@ -70,7 +84,7 @@ import FormLittleLong from "../components/FormLittleLong.astro";
       </Infostat>
     </section>
 
-    <!-- Derfor er fri abort en mærkesag -->
+    <!-- ------------- Derfor er fri abort en mærkesag ------------ -->
     <section class="my-[var(--margin-v-sektioner-xsmall)] md:my-[var(--margin-v-sektioner-large)]
        px-[var(--margin-h-sektioner-small)] md:px-[var(--margin-h-sektioner-xlarge)]">
       <div class="flex flex-col xl:flex-row gap-[var(--spacing-horizontal-2xl)] items-center">
@@ -82,23 +96,23 @@ import FormLittleLong from "../components/FormLittleLong.astro";
           <Heading htmlheading="h2" size="medium" weight="heavy" color="body" class="uppercase"> Derfor er fri abort en mærkesag </Heading>
 
           <ul class="space-y-3 md:space-y-4">
-            <li class="flex gap-4 items-start">
+            <li class="flex gap-4 items-start intersect:animate-fade-right intersect:animate-duration-[1000ms] intersect:animate-delay-[500ms]">
               <span class="w-3 h-10 bg-primary rounded-full mt-1"></span>
               <Text teksttype="body" weight="regular"> Fordi retten til at til- og fravælge reproduction er en af grundstenene i retten til kropslig selvbestemmelse. </Text>
             </li>
-            <li class="flex gap-4">
+            <li class="flex gap-4 intersect:animate-fade-right intersect:animate-duration-[1000ms] intersect:animate-delay-[700ms]">
               <span class="w-3 h-10 bg-primary rounded-full mt-1"></span>
               <Text teksttype="body" weight="regular"> Fordi vores krop er det eneste, som aldrig kan tages fra os og som ingen andre skal have kontrol over. </Text>
             </li>
-            <li class="flex gap-4">
+            <li class="flex gap-4 intersect:animate-fade-right intersect:animate-duration-[1000ms] intersect:animate-delay-[900ms]">
               <span class="w-3 h-10 bg-primary rounded-full mt-1"></span>
               <Text teksttype="body" weight="regular"> Fordi adgang og ret til familieplanlægning er fundamental for livsmuligheder for kvinder og piger i hele verden. </Text>
             </li>
-            <li class="flex gap-4">
+            <li class="flex gap-4 intersect:animate-fade-right intersect:animate-duration-[1000ms] intersect:animate-delay-[1100ms]">
               <span class="w-3 h-10 bg-primary rounded-full mt-1"></span>
               <Text teksttype="body" weight="regular"> Fordi kampen for at bestemme over eget liv og krop langt fra er vundet globalt. </Text>
             </li>
-            <li class="flex gap-4">
+            <li class="flex gap-4 intersect:animate-fade-right intersect:animate-duration-[1000ms] intersect:animate-delay-[1300ms]">
               <span class="w-3 h-10 bg-primary rounded-full mt-1"></span>
               <Text teksttype="body" weight="regular"> Derfor står vi værn om retten til fri abort - i anerkendelse af de sejre der er vundet og i solidaritet med de kampe der stadig kæmpes. </Text>
             </li>
@@ -106,7 +120,7 @@ import FormLittleLong from "../components/FormLittleLong.astro";
         </div>
       </div>
     </section>
-    <!-- Sex og samfund arbejder for sektion -->
+    <!-- ------------- Sex og samfund arbejder for sektion ------------ -->
     <LogoInformationBox
       title="Det arbejder Sex & Samfund for "
       text1="I Danmark har vi haft ret til sikker og lovlig abort siden 1973. Men det er ikke en ret, vi kan tage for givet. Udviklingen i lande som Polen og USA viser, at retten til sikker og lovlig abort er en ret, der skal værnes om. Selv i Danmark er der modstand mod kvinders ret til selv at vælge, om de vil have en abort eller ej."
@@ -114,7 +128,7 @@ import FormLittleLong from "../components/FormLittleLong.astro";
       text3="Ingen skal bestemme, hvorvidt du, din søster eller veninde skal have et barn eller ej! Derfor kæmper vi i Sex & Samfund for retten til fri og sikker abort for alle. Forbud mod aborter fører ikke til færre aborter, men til farligere aborter!"
     />
 
-    <!-- Kampen for fri abort sektion -->
+    <!-- ------------- Kampen for fri abort sektion ------------ -->
     <InformationBox
       title="Kampen for fri abort slutter aldrig"
       subtitle="Din indsats gør en reel forskel!"
@@ -130,7 +144,7 @@ import FormLittleLong from "../components/FormLittleLong.astro";
       </div>
     </InformationBox>
 
-    <!-- Personlige historier sektion -->
+    <!-- ------------- Personlige historier sektion ------------ -->
     <section class="my-[var(--margin-v-sektioner-xsmall)]
        px-[var(--margin-h-sektioner-small)]
        md:my-[var(--margin-v-sektioner-large)]
@@ -141,7 +155,7 @@ import FormLittleLong from "../components/FormLittleLong.astro";
 
       <!-- Øverst til venstre -->
       <div class="lg:grid grid-cols-2 grid-rows-2">
-        <div class="col-start-1 row-start-1 mb-20 md:mb-10">
+        <div class="col-start-1 row-start-1 mb-20 md:mb-10 intersect:animate-fade-right intersect:animate-duration-[1000ms] intersect:animate-delay-[500ms]">
           <Quote
             title="Jeg havde handlet ud fra omsorg"
             body="Jeg var 24, da jeg valgte abort. Efter indgrebet føltes stilheden tung, og jeg tvivlede på mig selv. Da min veninde kom forbi og bare sad hos mig, forsvandt noget af ensomheden. Beslutningen var stadig tung, men jeg begyndte at se, at jeg havde handlet ud fra omsorg; både for mig selv og det liv, jeg endnu ikke var klar til at tage ansvar for."
@@ -149,7 +163,7 @@ import FormLittleLong from "../components/FormLittleLong.astro";
           />
         </div>
         <!-- Nederst til højre -->
-        <div class="col-start-2 row-start-2">
+        <div class="col-start-2 row-start-2 intersect:animate-fade-left intersect:animate-duration-[1000ms] intersect:animate-delay-[700ms]">
           <Quote
             title="En beslutning jeg voksede af"
             body="Jeg blev gravid midt i et forhold, der var ved at gå i stykker, og vi besluttede sammen, at en abort var det rigtige. Det var en følelsesmæssigt svær tid, men efter nogle ugers refleksion mærkede jeg ro. Oplevelsen lærte mig, at jeg kan træffe svære valg og stå stærkere bagefter."
@@ -159,14 +173,14 @@ import FormLittleLong from "../components/FormLittleLong.astro";
       </div>
     </section>
 
-    <!-- Timeline sektion -->
+    <!-- ------------- Timeline sektion ------------ -->
     <section class="my-[var(--margin-v-sektioner-xsmall)]
        px-[var(--margin-h-sektioner-small)]
        md:my-[var(--margin-v-sektioner-large)]
        md:px-[var(--margin-h-sektioner-large)]">
       <div class="mx-auto my-[var(--margin-v-sektioner-xsmall)]
        px-[var(--margin-h-sektioner-small)] md:px-[var(--margin-h-sektioner-large)]">
-        <Heading htmlheading="h2" size="medium" weight="heavy" color="body">
+        <Heading htmlheading="h2" size="medium" weight="heavy" color="body" stylingclasses="intersect:animate-fade-right intersect:animate-duration-[1000ms] intersect:animate-delay-[500ms]">
           Årstal vi sammen skal være <span class="text-secondary">stolte</span> over
         </Heading>
       </div>

@@ -1,6 +1,8 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
 import "../styles/tailwind.css";
 const { title } = Astro.props;
 ---
@@ -13,10 +15,30 @@ const { title } = Astro.props;
 
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="robots" content="nofollow, noindex" />
     <title>{Astro.props.title}</title>
     <script defer src="https://unpkg.com/tailwindcss-intersect@2.x.x/dist/observer.min.js"></script>
   </head>
   <body class="">
+    <!-- Alpine-styret login modal -->
+    <div
+      x-data="{ open: !localStorage.getItem('iform-totally-logged-in'), pass: '', login() { if (this.pass === 'kea') { localStorage.setItem('iform-totally-logged-in','true'); this.open = false } else { this.pass = '' } } }"
+      x-cloak
+    >
+      <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center" aria-hidden="true">
+        <div class="absolute inset-0 bg-black/80"></div>
+        <div class="relative z-50 p-4 w-full max-w-sm">
+          <div class="loginmodal-container bg-base-100 p-6 rounded-lg shadow-lg text-center">
+            <Heading htmlheading="h1" size="small" weight="heavy" color="body">Login</Heading><br />
+            <Text teksttype="headline" stylingclasses="mb-2" weight="bold" color="label">This is a school project</Text>
+            <Text teksttype="body" stylingclasses="mb-10" weight="light" color="body">The password is <code>'kea'</code></Text>
+            <form @submit.prevent="login">
+              <input x-model="pass" type="password" name="pass" placeholder="Password" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <Header />
 
     <slot />

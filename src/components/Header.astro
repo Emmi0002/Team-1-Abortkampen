@@ -10,6 +10,7 @@ import Text from "./Text.astro";
     showmenu: false,
     scrolled: false,
     likedCount: 0,
+    cartCount: 0,
     init() {
       window.addEventListener('scroll', () => {
         this.scrolled = window.scrollY > 50;
@@ -23,63 +24,155 @@ import Text from "./Text.astro";
           this.likedCount--;
         }
       });
+
+      // Lyt efter tilføj til kurv events
+      window.addEventListener('cartAdded', (event) => {
+        this.cartCount += event.detail.quantity || 1;
+      });
     }
   }"
   class="fixed top-0 p-0 w-full z-40 transition-all duration-500 ease-in-out bg-transparent grid grid-cols-[1fr_7fr] lg:grid-cols-[1fr_14fr]"
 >
   <a href="/">
-    <div class="bg-secondary p-2 transition-all duration-500 ease-in-out items-center" :class="scrolled ? '' : 'self-start '">
-      <img src="/img/Logo/LogoWhite.webp" alt="Abortkampen logo" class="transition-all duration-500 ease-in-out mx-auto my-auto" :class="scrolled ? 'lg:h-16 h:8 w-auto' : 'lg:h-30 h:10 w-auto'" />
+    <div
+      class="bg-secondary p-2 transition-all duration-500 ease-in-out items-center"
+      :class="scrolled ? '' : 'self-start '"
+    >
+      <img
+        src="/img/Logo/LogoWhite.webp"
+        alt="Abortkampen logo"
+        class="transition-all duration-500 ease-in-out mx-auto my-auto"
+        :class="scrolled ? 'lg:h-16 h:8 w-auto' : 'lg:h-30 h:10 w-auto'"
+      />
     </div>
   </a>
-  <div class="navbar transition-all duration-500 ease-in-out bg-base-100 h-[80px]" :class="scrolled ? ' items-center' : 'py-4 items-start'">
+  <div
+    class="navbar transition-all duration-500 ease-in-out bg-base-100 h-[80px]"
+    :class="scrolled ? ' items-center' : 'py-4 items-start'"
+  >
     <div class="navbar-start">
       <!-- Logo med secondary baggrund -->
 
       <!-- Menu knap -->
       <div>
-        <button class="link lg:hidden transition-all duration-500 ease-in-out" :class="scrolled ? '' : 'self-start ml-2' " x-on:click="showmenu = !showmenu">
+        <button
+          class="link lg:hidden transition-all duration-500 ease-in-out"
+          :class="scrolled ? '' : 'self-start ml-2' "
+          x-on:click="showmenu = !showmenu"
+        >
           <Text teksttype="body" weight="bold" color="body">MENU</Text>
         </button>
 
         <!-- Desktop navigation - skjult på mobil -->
-        <div class="hidden ml-[var(--spacing-horizontal-m)] lg:flex items-center gap-4 transition-all duration-500 ease-in-out" :class="scrolled ? '' : 'self-start'">
-          <Link variant="headerlink" href="/omos" isActive={currentPath === "omos/" || currentPath === "omos"}> Om os </Link>
+        <div
+          class="hidden ml-[var(--spacing-horizontal-m)] lg:flex items-center gap-4 transition-all duration-500 ease-in-out"
+          :class="scrolled ? '' : 'self-start'"
+        >
+          <Link
+            variant="headerlink"
+            href="/omos"
+            isActive={currentPath === "omos/" || currentPath === "omos"}
+          >
+            Om os
+          </Link>
           <div class="w-px md:h-4 bg-base-content opacity-30"></div>
-          <Link variant="headerlink" href="/engagerdig" isActive={currentPath === "engagerdig/" || currentPath === "engagerdig"}> Engager dig </Link>
+          <Link
+            variant="headerlink"
+            href="/engagerdig"
+            isActive={currentPath === "engagerdig/" ||
+              currentPath === "engagerdig"}
+          >
+            Engager dig
+          </Link>
           <div class="w-px md:h-4 bg-base-content opacity-30"></div>
-          <Link variant="headerlink" href="https://www.sexogsamfund.dk/">Sex og samfund</Link>
+          <Link variant="headerlink" href="https://www.sexogsamfund.dk/"
+            >Sex og samfund</Link
+          >
         </div>
       </div>
     </div>
 
     <!-- Mobile menu -->
-    <div class="absolute top-full left-0 w-full bg-accent z-50 lg:hidden" x-show="showmenu" x-transition x-on:click.away="showmenu = false">
+    <div
+      class="absolute top-full left-0 w-full bg-accent z-50 lg:hidden"
+      x-show="showmenu"
+      x-transition
+      x-on:click.away="showmenu = false"
+    >
       <ul class="p-4">
         <li class="mb-2">
-          <Link variant="headerlink" href="/omos" color="body" class={currentPath === "omos/" || currentPath === "omos" ? "text-secondary !font-bold" : ""}> Om os </Link>
+          <Link
+            variant="headerlink"
+            href="/omos"
+            color="body"
+            class={currentPath === "omos/" || currentPath === "omos"
+              ? "text-secondary !font-bold"
+              : ""}
+          >
+            Om os
+          </Link>
         </li>
         <li class="mb-2">
-          <Link variant="headerlink" href="/engagerdig" color="body" class={currentPath === "engagerdig/" || currentPath === "engagerdig" ? "text-secondary !font-bold" : ""}> Engager dig </Link>
+          <Link
+            variant="headerlink"
+            href="/engagerdig"
+            color="body"
+            class={currentPath === "engagerdig/" || currentPath === "engagerdig"
+              ? "text-secondary !font-bold"
+              : ""}
+          >
+            Engager dig
+          </Link>
         </li>
         <li class="mb-2">
-          <Link variant="headerlink" color="body" href="https://www.sexogsamfund.dk/"> Sex og samfund </Link>
+          <Link
+            variant="headerlink"
+            color="body"
+            href="https://www.sexogsamfund.dk/"
+          >
+            Sex og samfund
+          </Link>
         </li>
       </ul>
     </div>
 
     <div class="navbar-end mr-5">
-      <Link variant="linkbutton" href="/stot" buttoncolor="primary" color="body"> STØT </Link>
+      <Link
+        variant="linkbutton"
+        href="/stot"
+        buttoncolor="primary"
+        color="body"
+      >
+        STØT
+      </Link>
       <div class="ml-4 flex flex-row md:gap-4 gap-6 items-center">
         <img src="/img/Icons/Search.webp" alt="søgeikon" class="md:h-8 h-6" />
 
         <!-- Heart med tæller -->
         <div class="relative">
           <img src="/img/Icons/Heart.webp" alt="like" class="md:h-8 h-6" />
-          <div class="absolute -top-2 -right-2 bg-secondary text-neutral-content text-xs rounded-full min-w-[20px] h-5 flex items-center justify-center transition-all duration-200" x-show="likedCount > 0" x-text="likedCount"></div>
+          <div
+            class="absolute -top-2 -right-2 bg-secondary text-neutral-content text-xs rounded-full min-w-[20px] h-5 flex items-center justify-center transition-all duration-200"
+            x-show="likedCount > 0"
+            x-text="likedCount"
+          >
+          </div>
         </div>
 
-        <img src="/img/Icons/Shoppingcart.webp" alt="indkøbskurv" class="md:h-8 h-6" />
+        <!-- Indkøbskurv med tæller -->
+        <div class="relative">
+          <img
+            src="/img/Icons/Shoppingcart.webp"
+            alt="indkøbskurv"
+            class="md:h-8 h-6"
+          />
+          <div
+            class="absolute -top-2 -right-2 bg-secondary text-neutral-content text-xs rounded-full min-w-[20px] h-5 flex items-center justify-center transition-all duration-200"
+            x-show="cartCount > 0"
+            x-text="cartCount"
+          >
+          </div>
+        </div>
       </div>
     </div>
   </div>

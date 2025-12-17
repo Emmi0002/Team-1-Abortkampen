@@ -85,8 +85,8 @@ const {
       <CartButton variant="secondary">{buttonText}</CartButton>
     </div>
 
-    <!-- CART TOAST / OVERLAY -->
-    <div class="fixed top-25 -right-10 z-50">
+    <!-- CART OVERLAY -->
+    <div class="fixed top-25 -right-12 md:-right-15 z-50">
       <div
         x-show="open"
         x-transition:enter="transition transform ease-out duration-1500"
@@ -99,14 +99,15 @@ const {
       >
         <!-- Billede -->
         <div class="flex-shrink-0">
-          <img src={imageSrc} alt={imageAlt} class="w-32 h-auto" />
+          <img src={imageSrc} alt={imageAlt} class="w-20 md:w-32 h-auto" />
         </div>
 
         <!-- Tekst -->
         <div class="flex flex-col items-end text-right pr-8 w-full">
           <Text teksttype="Headline" weight="bold"> Tilføjet til kurv </Text>
 
-          <div class="h-2 w-30 bg-secondary rounded-full mt-4 mb-4"></div>
+          <div class="h-2 w-35 md:w-30 bg-secondary rounded-full mt-4 mb-4">
+          </div>
 
           <Text teksttype="body">{title}</Text>
           <Text teksttype="body">{pris}</Text>

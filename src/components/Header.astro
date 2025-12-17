@@ -9,9 +9,19 @@ import Text from "./Text.astro";
   x-data="{ 
     showmenu: false,
     scrolled: false,
+    likedCount: 0,
     init() {
       window.addEventListener('scroll', () => {
         this.scrolled = window.scrollY > 50;
+      });
+      
+      // Lyt efter custom events fra produktkort
+      window.addEventListener('heartClicked', (event) => {
+        if (event.detail.liked) {
+          this.likedCount++;
+        } else {
+          this.likedCount--;
+        }
       });
     }
   }"
@@ -62,7 +72,13 @@ import Text from "./Text.astro";
       <Link variant="linkbutton" href="/stot" buttoncolor="primary" color="body"> STØT </Link>
       <div class="ml-4 flex flex-row md:gap-4 gap-6 items-center">
         <img src="/img/Icons/Search.webp" alt="søgeikon" class="md:h-8 h-6" />
-        <img src="/img/Icons/Heart.webp" alt="like" class="md:h-8 h-6" />
+
+        <!-- Heart med tæller -->
+        <div class="relative">
+          <img src="/img/Icons/Heart.webp" alt="like" class="md:h-8 h-6" />
+          <div class="absolute -top-2 -right-2 bg-secondary text-neutral-content text-xs rounded-full min-w-[20px] h-5 flex items-center justify-center transition-all duration-200" x-show="likedCount > 0" x-text="likedCount"></div>
+        </div>
+
         <img src="/img/Icons/Shoppingcart.webp" alt="indkøbskurv" class="md:h-8 h-6" />
       </div>
     </div>

@@ -1,6 +1,7 @@
 ---
 import Button from "../components/Button.astro";
 import Text from "../components/Text.astro";
+import Link from "../components/Link.astro";
 ---
 
 <!-- ------------ Mobil version (høj) ------------ -->
@@ -50,6 +51,13 @@ import Text from "../components/Text.astro";
       <Button variant="secondary">250 kr.</Button>
     </div>
     <input type="text" placeholder="Andet beløb" class="input input-secondary w-full" />
-    <Button variant="primary" href="/stot">STØT</Button>
+   <Link
+        variant="linkbutton"
+        href="/stot"
+        buttoncolor="primary"
+        color="body"
+      >
+        STØT
+      </Link>
   </div>
 </section>

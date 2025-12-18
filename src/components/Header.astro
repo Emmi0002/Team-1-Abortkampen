@@ -147,10 +147,12 @@ import Text from "./Text.astro";
         STØT
       </Link>
       <div class="ml-4 flex flex-row md:gap-4 gap-6 items-center">
+        <!-- Søgeikon -->
+      <div class="flex-shrink-0">
         <img src="/img/Icons/Search.webp" alt="søgeikon" class="md:h-8 h-6" />
-
+      </div>
         <!-- Heart med tæller -->
-        <div class="relative">
+        <div class="relative flex-shrink-0">
           <img src="/img/Icons/Heart.webp" alt="like" class="md:h-8 h-6" />
           <div
             class="absolute -top-2 -right-2 bg-secondary text-neutral-content text-xs rounded-full min-w-[20px] h-5 flex items-center justify-center transition-all duration-200"
@@ -161,7 +163,7 @@ import Text from "./Text.astro";
         </div>
 
         <!-- Indkøbskurv med tæller -->
-        <div class="relative">
+        <div class="relative flex-shrink-0">
           <img
             src="/img/Icons/Shoppingcart.webp"
             alt="indkøbskurv"
